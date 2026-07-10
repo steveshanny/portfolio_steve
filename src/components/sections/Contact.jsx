@@ -62,7 +62,7 @@ export default function Contact() {
       id: 1,
       icon: <FaGithub />,
       label: 'GitHub',
-      url: 'https://github.com/steverasoafanirindraibe',
+      url: 'https://github.com/steveshanny',
 
       delay: 0.4
     },
@@ -70,7 +70,7 @@ export default function Contact() {
       id: 2,
       icon: <FaLinkedin />,
       label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/steve-rasoafanirindraibe-b8baa33a7',
+      url: 'https://www.linkedin.com/in/steve-shanny',
       delay: 0.5
     },
     {

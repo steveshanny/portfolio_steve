@@ -193,11 +193,11 @@ export default function Projects() {
 
   const projectsData = useMemo(() => [
     { id: 0, featured: true, images: ['/projects/ebh/EBH-8.png','/projects/ebh/EBH-7.png','/projects/ebh/EBH-9.png','/projects/ebh/EBH-10.png'], techs: ['NextJs', ,'PostgreSQL', 'TypeScript', 'Tailwind', 'Drizzle-ORM', 'ReactJs'] },
-    { id: 1, featured: true, images: ['/projects/openService/cyber-1.png','/projects/openService/cyber-3.png','/projects/openService/cyber-4.png','/projects/openService/cyber-5.png'], techs: ['SpringBoot', 'NextJs', 'PostgreSQL' ,'REST API', 'Tailwind'], githubLink: 'https://github.com/steverasoafanirindraibe/CyberCafe_application_web' },
+    { id: 1, featured: true, images: ['/projects/openService/cyber-1.png','/projects/openService/cyber-3.png','/projects/openService/cyber-4.png','/projects/openService/cyber-5.png'], techs: ['SpringBoot', 'NextJs', 'PostgreSQL' ,'REST API', 'Tailwind'], githubLink: 'https://github.com/steveshanny/CyberCafe_application_web' },
     { id: 2, featured: false, images: ['/projects/autoEcole/autoecole-1.png','/projects/autoEcole/autoecole-2.png','/projects/autoEcole/autoecole-4.png'], techs: ['Laravel', 'NextJs', 'PostgreSQL'], githubLink: 'https://github.com/neon-rah/application-web-auto-ecole-projet' },
     { id: 3, featured: true, images: ['/projects/impots/impots-1.png','/projects/impots/impots-4.png','/projects/impots/impots-5.png','/projects/impots/impots-7.png'], techs: ['ReactJs', 'ExpressJs', 'MySQL','Tailwind','CSS'], hasReport: true },
     { id: 4, featured: false, images: ['/projects/radioTsiry/radio-1.png','/projects/radioTsiry/radio-4.png','/projects/radioTsiry/radio-5.png'], techs: ['JavaScript', 'PHP', 'MySQL'] },
-    { id: 5, featured: false, images: ['/projects/homevers/homevers-1.png','/projects/homevers/homevers-2.png','/projects/homevers/homevers-3.png'], techs: ['ReactJs', 'PHP', 'MySQL'], githubLink: 'https://github.com/steverasoafanirindraibe/Homeveres-appli.git' }
+    { id: 5, featured: false, images: ['/projects/homevers/homevers-1.png','/projects/homevers/homevers-2.png','/projects/homevers/homevers-3.png'], techs: ['ReactJs', 'PHP', 'MySQL'], githubLink: 'https://github.com/steveshanny/Homeveres-appli.git' }
   ], []);
 
   const featuredProjects = projectsData.filter(p => p.featured);

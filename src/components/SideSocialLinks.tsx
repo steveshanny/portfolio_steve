@@ -6,13 +6,13 @@ const SideSocialLinks = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/steve-rasoafanirindraibe-b8baa33a7",
+      href: "https://www.linkedin.com/in/steve-shanny",
       label: "LinkedIn",
       color: "hover:text-blue-500"
     },
     {
       icon: Github,
-      href: "https://github.com/steverasoafanirindraibe",
+      href: "https://github.com/steveshanny",
       label: "GitHub",
       color: "hover:text-gray-700 dark:hover:text-white"
     },

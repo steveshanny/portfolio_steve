@@ -57,7 +57,7 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                         
                         {/* Nom stylisé comme une balise ou un élément de code */}
                         <span className="text-lg sm:text-2xl font-bold ml-1 sm:ml-2">
-                          &lt;<span className="text-teal-400">Steve </span><span className="text-theme2">Ras</span>/&gt;
+                          &lt;<span className="text-teal-400">Steve Sha</span><span className="text-theme2">nny</span>/&gt;
                         </span>
                       </AnimatedSection>
                       {/* --- Headline Principal (Proposition de Valeur) --- */}
