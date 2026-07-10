@@ -16,13 +16,6 @@
     "tagline": "Développeur Full Stack Senior | Expert en écosystème React & SpringBoot | Freelance",
     "available":"Disponible"
   },
-  "welcome": {
-    "title": "Bienvenue",
-    "subtitle": "Démonstration de mes compétences", 
-    "message": "Je conçois des solutions web modernes, rapides et fiables. Découvrez mes projets, mes compétences et mon approche pour créer des produits utiles et performants.",
-    "button": "Accéder au portfolio",
-    "loading": "Chargement des contenus..."
-  },
   "about": {
     "title": "À Propos",
     "subtitle": "À Propos de moi et mon parcours",
