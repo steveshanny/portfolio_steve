@@ -1,6 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useEffect, useRef, useState } from 'react';
 
 const AnimatedSection = ({ 
   children, 
@@ -11,44 +10,50 @@ const AnimatedSection = ({
   className = '',
   triggerOnce = true
 }) => {
-  const { ref, isInView } = useScrollAnimation(threshold, triggerOnce);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
 
-  const getVariants = () => {
-    const distance = 100; 
-    
-    const baseVariants = {
-      hidden: {
-        opacity: 0,
-        y: direction === 'up' ? distance : direction === 'down' ? -distance : 0,
-        x: direction === 'left' ? distance : direction === 'right' ? -distance : 0,
-        scale: direction === 'scale' ? 0.8 : 1
-      },
-      visible: {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        scale: 1,
-        transition: {
-          duration: duration,
-          delay: delay,
-          // ease: [0.25, 0.46, 0.45, 0.94] // 
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (triggerOnce) observer.disconnect();
         }
-      }
-    };
-    
-    return baseVariants;
+      },
+      { threshold, rootMargin: '0px 0px 60px 0px' }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [threshold, triggerOnce]);
+
+  const getTransform = () => {
+    if (isVisible) return 'translate3d(0, 0, 0) scale(1)';
+    const distance = 60;
+    if (direction === 'up') return `translate3d(0, ${distance}px, 0) scale(0.98)`;
+    if (direction === 'down') return `translate3d(0, -${distance}px, 0) scale(0.98)`;
+    if (direction === 'left') return `translate3d(${distance}px, 0, 0) scale(0.98)`;
+    if (direction === 'right') return `translate3d(-${distance}px, 0, 0) scale(0.98)`;
+    return 'translate3d(0, 0, 0) scale(0.98)';
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={getVariants()}
-      className={className + 'overflow-hidden'}
+      className={`${className} overflow-hidden`}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: getTransform(),
+        transition: `opacity ${duration}s ease, transform ${duration}s ease`,
+        transitionDelay: `${delay}s`,
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
