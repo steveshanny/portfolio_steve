@@ -39,8 +39,8 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                         <AnimatedSection direction='scale' duration={0.7} className="bg-teal-500/10 rounded-full rounded-br-xl p-1 sm:p-2 w-40 h-40 sm:w-80 sm:h-96 overflow-hidden">
                             <img 
                               className='w-full h-full object-cover rounded-br-xl rounded-full' 
-                              src={"/images/steve_profil.jpg"} 
-                              alt='steve_profil' 
+                              src={"/images/steve_shanny.jpg"} 
+                              alt='Steve Shanny' 
                             />
                           </AnimatedSection>
                         </div>
@@ -96,7 +96,7 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                         <div>
                         <a 
                           href='/documents/cv_steve_non_confidentiel.pdf' 
-                          download="Steve_Rasoafanirindraibe_CV.pdf" 
+                          download="Steve_Shanny_CV.pdf" 
                           className="flex items-center justify-center w-48 py-2 my-4 px-3 bg-gray-950 text-teal-300 rounded-lg text-xs font-semibold border border-teal-500/50 hover:bg-teal-500/40 transition duration-300"
                         > 
                           <Download className='mr-2 h-4 w-4' /> 
@@ -183,7 +183,7 @@ export default function Home() {
               ))}
               <a 
                 href='/documents/cv_steve_non_confidentiel.pdf' 
-                download="Steve_Rasoafanirindraibe_CV.pdf" 
+                download="Steve_Shanny_CV.pdf" 
                 className="flex items-center py-1.5 px-3 bg-teal-500 text-gray-900 rounded-full text-xs font-semibold hover:bg-theme2 transition duration-300"
               > 
                 <Download className='mr-2 h-4 w-4' /> 

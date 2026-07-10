@@ -6,8 +6,8 @@ import ClientLayout from "./ClientLayout";
 
 
 export const metadata: Metadata = {
-  title: "Steve Rasoafanirindraibe - Portfolio",
-  description: "Portfolio de Steve Rasoafanirindraibe, développeur full-stack",
+  title: "Steve Shanny",
+  description: "Steve Shanny's Portfolio, Full-Stack Developer",
     icons: {
     icon: [
       {
