@@ -1,30 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import WelcomePage from '@/components/Welcome';
+import { useEffect, useState } from 'react';
 
 export default function ClientLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [showWelcome, setShowWelcome] = useState(true);
   const [isBooting, setIsBooting] = useState(true);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsBooting(false), 120);
-    const hasSeenWelcome = window.localStorage.getItem('hasSeenWelcome');
-    if (hasSeenWelcome) {
-      setShowWelcome(false);
-    }
-
     return () => window.clearTimeout(timer);
   }, []);
-
-  const handleEnterPortfolio = () => {
-    window.localStorage.setItem('hasSeenWelcome', 'true');
-    setShowWelcome(false);
-  };
 
   if (isBooting) {
     return (
@@ -35,10 +23,6 @@ export default function ClientLayout({
         </div>
       </div>
     );
-  }
-
-  if (showWelcome) {
-    return <WelcomePage onEnter={handleEnterPortfolio} />;
   }
 
   return <>{children}</>;

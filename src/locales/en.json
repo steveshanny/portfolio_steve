@@ -16,13 +16,6 @@
     "available":"Available"
 
   },
-  "welcome": {
-    "title": "Welcome", 
-    "subtitle": "Showcase of my skills",
-    "message": "This interactive portfolio demonstrates my creative and technical capabilities. The projects featured here highlight some of my web development achievements. For your professional projects, I design custom solutions tailored to your specific requirements. I am available to discuss your projects or to join your team as a developer.",
-    "button": "Enter portfolio", 
-    "loading": "Loading content..."
-  },
   "about": {
     "title": "About Me",
     "subtitle": "About me and my education",
