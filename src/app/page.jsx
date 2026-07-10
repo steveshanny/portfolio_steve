@@ -40,7 +40,7 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                         <AnimatedSection direction='scale' duration={0.7} className="bg-teal-500/10 rounded-full rounded-br-xl p-1 sm:p-2 w-40 h-40 sm:w-80 sm:h-96 overflow-hidden">
                             <Image
                               className='w-full h-full object-cover rounded-br-xl rounded-full'
-                              src="/images/steve_shanny.jpg"
+                              src="/images/steve_shanny.jpeg"
                               alt="Steve Rasoafanirindraibe"
                               fill
                               priority

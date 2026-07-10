@@ -12,7 +12,10 @@ const stackSansNotch = localFont({
   weight: "100 900",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Steve Rasoafanirindraibe | Développeur Full-Stack",
     template: "%s | Steve Rasoafanirindraibe",
