@@ -12,14 +12,14 @@
     "download": "Télécharger CV",
     "expertise": "Expertise FullStack",
     "greeting": "Salut, moi c'est",
-    "headline": "Je transforme vos idées en solutions logicielles performantes.",
+    "headline": "Je transforme vos idées en applications web modernes et performantes.",
     "tagline": "Développeur Full Stack Senior | Expert en écosystème React & SpringBoot | Freelance",
     "available":"Disponible"
   },
   "welcome": {
     "title": "Bienvenue",
     "subtitle": "Démonstration de mes compétences", 
-    "message": "Ce portfolio interactif présente une démonstration de mes capacités créatives et techniques. Les projets illustrés ici mettent en avant certaines de mes réalisations en développement web. Pour vos projets réels, je conçois des solutions sur mesure adaptées à vos besoins spécifiques. Je suis disponible pour discuter de vos projets ou pour rejoindre votre équipe en tant que développeur.",
+    "message": "Je conçois des solutions web modernes, rapides et fiables. Découvrez mes projets, mes compétences et mon approche pour créer des produits utiles et performants.",
     "button": "Accéder au portfolio",
     "loading": "Chargement des contenus..."
   },

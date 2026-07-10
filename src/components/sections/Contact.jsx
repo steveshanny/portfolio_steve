@@ -62,7 +62,7 @@ export default function Contact() {
       id: 1,
       icon: <FaGithub />,
       label: 'GitHub',
-      url: 'https://github.com/steverasoafanirindraibe',
+      url: 'https://github.com/steveshanny',
 
       delay: 0.4
     },
@@ -70,7 +70,7 @@ export default function Contact() {
       id: 2,
       icon: <FaLinkedin />,
       label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/steve-rasoafanirindraibe-b8baa33a7',
+      url: 'https://www.linkedin.com/in/steve-shanny',
       delay: 0.5
     },
     {
@@ -132,7 +132,7 @@ export default function Contact() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_name: 'Steve Rasoafanirindraibe',
+          to_name: 'Steve Shanny',
           reply_to: formData.email
         },
         EMAILJS_CONFIG.USER_ID
@@ -144,7 +144,7 @@ export default function Contact() {
         {
           to_name: formData.name,
           to_email: formData.email,
-          from_name: 'Steve Rasoafanirindraibe',
+          from_name: 'Steve Shanny',
           reply_to: 'steveshannyrasoafanirindraibe@gmail.com'
         },
         EMAILJS_CONFIG.USER_ID
@@ -368,7 +368,7 @@ export default function Contact() {
         <div className='max-w-6xl mx-auto px-4'>
           <div className='text-center'>
             <p className='text-gray-400 text-[11px] sm:text-xs'>
-              &copy; 2026 <strong className='text-white'>Steve Rasoafanirindraibe</strong>. {t('copyright.text')}
+              &copy; 2026 <strong className='text-white'>Steve Shanny</strong>. {t('copyright.text')}
             </p>
           </div>
         </div>

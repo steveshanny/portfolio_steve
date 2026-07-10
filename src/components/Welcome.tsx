@@ -11,19 +11,12 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulation du chargement
-    const timer = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(timer);
-          setIsLoading(false);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 100);
+    const timer = window.setTimeout(() => {
+      setProgress(100);
+      setIsLoading(false);
+    }, 450);
 
-    return () => clearInterval(timer);
+    return () => window.clearTimeout(timer);
   }, []);
 
   return (
@@ -35,8 +28,8 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
           {/* Sélecteur de langue en haut à droite */}
           <div className="flex justify-between mb-4 sm:mt-8 mt-4 items-center">
             <div className='flex items-center text-sm sm:text-lg' >
-                <Image src={"/images/steve_profil.jpg"} className='rounded-full mr-3' width={30} height={30} alt='steve' ></Image>
-                <div>Steve Rasoafanirindraibe</div>
+                <Image src={"/images/steve_shanny.jpg"} className='rounded-full mr-3' width={30} height={30} alt='Steve Shanny' ></Image>
+                <div>Steve Shanny</div>
                 
             </div>
             <div className="relative">
@@ -96,7 +89,7 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
               className="group relative bg-gradient-to-r from-teal-600 to-teal-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white py-3 px-6 rounded-2xl transition-all duration-500 ease-out transform hover:scale-105 border-2 border-teal-400/50 w-auto"
             >
               <div className="flex items-center justify-center">
-                <FaRocket className={`mr-3 transition-transform duration-300 ${isLoading ? 'animate-bounce' : 'group-hover:rotate-45'}`} />
+                <FaRocket className={`mr-3 transition-transform duration-300 ${isLoading ? 'animate-pulse' : 'group-hover:rotate-45'}`} />
                 <span className="text-xs sm:text-sm">
                   {isLoading ? t('welcome.loading') : t('welcome.button')}
                 </span>

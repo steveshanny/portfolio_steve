@@ -14,16 +14,14 @@ export default function ClientLayout({
 
   useEffect(() => {
     setIsMounted(true);
-    const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
-        if (hasSeenWelcome) {
-          setShowWelcome(false);
-        } else {
-          setShowWelcome(true);
-        }
+    const hasSeenWelcome = window.localStorage.getItem('hasSeenWelcome');
+    if (hasSeenWelcome) {
+      setShowWelcome(false);
+    }
   }, []);
 
   const handleEnterPortfolio = () => {
-    localStorage.setItem('hasSeenWelcome', 'true');
+    window.localStorage.setItem('hasSeenWelcome', 'true');
     setShowWelcome(false);
   };
 

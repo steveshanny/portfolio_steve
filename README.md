@@ -1,5 +1,5 @@
 # Portfolio – Steve Ras
-<img src="public/images/steve_profil.jpg" width="200" style="border-radius: 20px;" alt="Description">
+<img src="public/images/steve_shanny.jpg" width="200" style="border-radius: 20px;" alt="Steve Shanny">
 
 Bienvenue sur mon portfolio !
 ## Présentation
