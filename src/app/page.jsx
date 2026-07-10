@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { useScroll } from '@/hooks/useScroll';
 import { useTranslation } from '@/hooks/useTranslation';
 import About from '@/components/sections/About';
@@ -37,10 +38,13 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                       </AnimatedSection>
                       <div className="rounded-full rounded-br-xl bg-teal-500/10 p-1 sm:p-2">
                         <AnimatedSection direction='scale' duration={0.7} className="bg-teal-500/10 rounded-full rounded-br-xl p-1 sm:p-2 w-40 h-40 sm:w-80 sm:h-96 overflow-hidden">
-                            <img 
-                              className='w-full h-full object-cover rounded-br-xl rounded-full' 
-                              src={"/images/steve_shanny.jpg"} 
-                              alt='Steve Shanny' 
+                            <Image
+                              className='w-full h-full object-cover rounded-br-xl rounded-full'
+                              src="/images/steve_shanny.jpg"
+                              alt="Steve Rasoafanirindraibe"
+                              fill
+                              priority
+                              sizes="(max-width: 768px) 100vw, 50vw"
                             />
                           </AnimatedSection>
                         </div>
@@ -62,7 +66,7 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                       </AnimatedSection>
                       {/* --- Headline Principal (Proposition de Valeur) --- */}
                       <AnimatedSection direction='left' delay={0.1} duration={0.3} className="text-xl sm:text-4xl font-extrabold leading-tight mb-3 sm:mb-4">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500">{t("hero.headline")}</span>
+                        <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500">{t("hero.headline")}</h1>
                       </AnimatedSection>
                     </div>
                         {/* Titre & Slogan */}

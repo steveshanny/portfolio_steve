@@ -8,14 +8,6 @@
   --theme2: #da5b29;
 }
 
-@font-face {
-  font-family: 'Stack Sans Notch';
-  src: url('./fonts/StackSansNotch/StackSansNotch-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -28,7 +20,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Stack Sans Notch', sans-serif;
+  font-family: var(--font-stack-sans-notch), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
 }
 
 @keyframes moveHorizontalFast {
@@ -124,8 +124,7 @@ html {
 
 /* Webkit browsers */
 ::-webkit-scrollbar {
-  width: 100px;
-  /* height: 10px; */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -166,8 +165,7 @@ html {
         url('/images/image-1.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    /* filter: blur(7px);  */
+    background-attachment: scroll;
     z-index: -1;
 }
 

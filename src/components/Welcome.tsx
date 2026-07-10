@@ -14,7 +14,7 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
     const timer = window.setTimeout(() => {
       setProgress(100);
       setIsLoading(false);
-    }, 450);
+    }, 180);
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -22,13 +22,12 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-teal-950/50 to-black flex items-center justify-center p-4">
       <div className="max-w-4xl w-full">
-        {/* Carte principale */}
-        <div className="bg-black/40 backdrop-blur-lg border-2 border-teal-500/30 rounded-3xl px-4 sm:px-12 shadow-2xl shadow-teal-500/20">
+        <div className="bg-black/40 backdrop-blur-lg border border-teal-500/20 rounded-3xl px-4 sm:px-12 py-6 shadow-xl shadow-teal-500/10">
           
           {/* Sélecteur de langue en haut à droite */}
           <div className="flex justify-between mb-4 sm:mt-8 mt-4 items-center">
             <div className='flex items-center text-sm sm:text-lg' >
-                <Image src={"/images/steve_shanny.jpg"} className='rounded-full mr-3' width={30} height={30} alt='Steve Shanny' ></Image>
+                <Image src={"/images/steve_shanny.jpg"} className='rounded-full mr-3' width={30} height={30} alt='Steve Rasoafanirindraibe' priority></Image>
                 <div>Steve Shanny</div>
                 
             </div>
@@ -47,11 +46,9 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
 
           {/* En-tête avec icône animée */}
           <div className="text-center mb-4 sm:mb-6">
-            <div className="relative inline-block">
-
-              <div className="absolute -top-2 -right-2">
-                <FaStar className="text-yellow-400 text-sm animate-spin" />
-              </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-teal-200">
+              <FaStar className="text-yellow-400" />
+              <span>Portfolio</span>
             </div>
           </div>
 
@@ -86,10 +83,10 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
             <button
               onClick={onEnter}
               disabled={isLoading}
-              className="group relative bg-gradient-to-r from-teal-600 to-teal-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white py-3 px-6 rounded-2xl transition-all duration-500 ease-out transform hover:scale-105 border-2 border-teal-400/50 w-auto"
+              className="group relative bg-gradient-to-r from-teal-600 to-teal-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white py-3 px-6 rounded-2xl transition-all duration-300 ease-out hover:scale-[1.02] border border-teal-400/50 w-auto"
             >
               <div className="flex items-center justify-center">
-                <FaRocket className={`mr-3 transition-transform duration-300 ${isLoading ? 'animate-pulse' : 'group-hover:rotate-45'}`} />
+                <FaRocket className={`mr-3 transition-transform duration-300 ${isLoading ? 'animate-pulse' : 'group-hover:rotate-12'}`} />
                 <span className="text-xs sm:text-sm">
                   {isLoading ? t('welcome.loading') : t('welcome.button')}
                 </span>
