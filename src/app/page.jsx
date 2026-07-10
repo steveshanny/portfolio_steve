@@ -13,7 +13,7 @@ import AvailabilityIndicator from '@/components/AvailabilityIndicator';
 
 
 // Composant principal de la section Hero
-const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems, techStack, getTranslateY }) => {
+const HeroContent = ({ handleNavClick, t, techStack }) => {
     return (
         <div className="w-full h-full font-inter bg-gradient-to-br from-teal-950/90 via-gray-950 to-teal-950/90 text-white">
             
@@ -24,10 +24,10 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
                 <div 
                     className="relative py-6 sm:py-0 overflow-visible z-10 w-full sm:w-5/12 h-full flex justify-center items-center duration-400 ease-out"
                 >
-                    <div className="relative p-2 bg-teal-500/10 rounded-tr-full rounded-tl-full rounded-bl-full hover:scale-105 transition-scale duration-500 ease-in">
+                    <div className="relative p-2 rounded-tr-full rounded-tl-full rounded-bl-full hover:scale-105 transition-scale duration-500 ease-in">
                       
                       {/* Badge Disponible */}
-                      <AnimatedSection delay={2} direction='scale' className="hidden sm:block h-full absolute top-6 left-4 z-20 px-2">
+                      <AnimatedSection delay={2} direction='scale' className="hidden sm:block h-full absolute top-6 -left-4 z-20 px-2">
                           <div className="flex items-center gap-1.5 px-2 py-1 border border-green-500 bg-black/50 rounded-full shadow-lg shadow-green-500/30 animate-pulse-subtle">
                               <span className="sm:text-[10px] text-[9px] font-bold text-white tracking-wide">
                                   {t('hero.available')}
@@ -36,17 +36,15 @@ const HeroContent = ({ handleNavClick, currentLang, setCurrentLang, t, navItems,
 
                           </div>
                       </AnimatedSection>
-                      <div className="rounded-full rounded-br-xl bg-teal-500/10 p-1 sm:p-2">
-                        <AnimatedSection direction='scale' duration={0.7} className="bg-teal-500/10 rounded-full rounded-br-xl p-1 sm:p-2 w-40 h-40 sm:w-80 sm:h-96 overflow-hidden">
-                            <Image
-                              className='w-full h-full object-cover rounded-br-xl rounded-full'
-                              src="/images/steve_shanny.jpeg"
-                              alt="Steve Rasoafanirindraibe"
-                              fill
-                              priority
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                          </AnimatedSection>
+                      <div className="rounded-full rounded-br-xl p-1 sm:p-2 w-40 h-40 sm:w-80 sm:h-96">
+                          <Image
+                            className='w-full h-full object-cover rounded-br-xl rounded-full'
+                            src="/images/steve_shanny.jpeg"
+                            alt="Steve Shanny"
+                            fill
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
                     </div>
                 </div>

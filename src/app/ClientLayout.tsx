@@ -28,8 +28,8 @@ export default function ClientLayout({
 
   if (isBooting) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center px-4">
-        <div className="flex items-center gap-3 rounded-full border border-teal-500/20 bg-white/5 px-4 py-3 text-sm text-teal-100 shadow-lg shadow-teal-500/10">
+      <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
+        <div className="flex items-center gap-3 rounded-full border border-teal-500/20 px-4 py-3 text-sm text-teal-100">
           <span className="h-2.5 w-2.5 rounded-full bg-teal-400 animate-pulse" />
           <span>Chargement…</span>
         </div>

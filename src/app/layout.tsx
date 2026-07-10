@@ -17,13 +17,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Steve Rasoafanirindraibe | Développeur Full-Stack",
-    template: "%s | Steve Rasoafanirindraibe",
+    default: "Steve Shanny | Développeur Full-Stack",
+    template: "%s | Steve Shanny",
   },
   description:
-    "Portfolio de Steve Rasoafanirindraibe, développeur full-stack spécialisé en Next.js, React, Spring Boot, PostgreSQL et expériences web modernes.",
+    "Portfolio de Steve Shanny, développeur full-stack spécialisé en Next.js, React, Spring Boot, PostgreSQL et expériences web modernes.",
   keywords: [
-    "Steve Rasoafanirindraibe",
+    "Steve Shanny",
     "portfolio développeur",
     "full-stack",
     "Next.js",
@@ -33,26 +33,26 @@ export const metadata: Metadata = {
     "PostgreSQL",
   ],
   applicationName: "Portfolio Steve",
-  authors: [{ name: "Steve Rasoafanirindraibe" }],
-  creator: "Steve Rasoafanirindraibe",
-  publisher: "Steve Rasoafanirindraibe",
+  authors: [{ name: "Steve Shanny" }],
+  creator: "Steve Shanny",
+  publisher: "Steve Shanny",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Steve Rasoafanirindraibe | Développeur Full-Stack",
+    title: "Steve Shanny | Développeur Full-Stack",
     description:
-      "Portfolio de Steve Rasoafanirindraibe, développeur full-stack spécialisé en Next.js, React, Spring Boot et bases de données modernes.",
+      "Portfolio de Steve Shanny, développeur full-stack spécialisé en Next.js, React, Spring Boot et bases de données modernes.",
     url: "/",
     siteName: "Portfolio Steve",
     type: "website",
     locale: "fr_FR",
-    images: [{ url: "/images/steve_shanny.jpg", width: 1200, height: 630, alt: "Steve Rasoafanirindraibe" }],
+    images: [{ url: "/images/steve_shanny.jpg", width: 1200, height: 630, alt: "Steve Shanny" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steve Rasoafanirindraibe | Développeur Full-Stack",
+    title: "Steve Shanny | Développeur Full-Stack",
     description:
-      "Portfolio de Steve Rasoafanirindraibe, développeur full-stack spécialisé en Next.js, React, Spring Boot et bases de données modernes.",
+      "Portfolio de Steve Shanny, développeur full-stack spécialisé en Next.js, React, Spring Boot et bases de données modernes.",
     images: ["/images/steve_shanny.jpg"],
   },
   icons: {

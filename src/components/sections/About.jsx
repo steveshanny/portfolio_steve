@@ -128,13 +128,9 @@ const DomainCard = ({ title, description, icons, accentColor }) => {
 export default function About() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(educationDomains[0].key);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleTabChange = (key) => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
     setActiveTab(key);
-    setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const renderDescription = () => {
@@ -197,8 +193,7 @@ export default function About() {
               
               <div className="relative z-10">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
-                  bg-gradient-to-r from-teal-900/90 to-gray-900/20 border border-gray-200/30 
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full  border border-gray-200/30 
                   backdrop-blur-sm mb-6">
                   <FaUserAlt className="text-teal-400 text-sm" />
                   <span className="text-xs font-medium text-teal-500">{t("about.badge")} ?</span>
@@ -206,7 +201,7 @@ export default function About() {
                 
                 {/* Titre */}
                 <h3 className="sm:text-xl text-md font-bold mb-4  text-gray-300">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-gray-200">
+                  <span className="">
                     {t("about.role")} & {t("about.solver")}
                   </span>
                   {" "} & {}
@@ -226,18 +221,10 @@ export default function About() {
           {/* Colonne Droite - Spécialisations */}
           <div className="">
             {/* Navigation par onglets améliorée */}
-            <AnimatedSection 
-              direction='right'
-              threshold={0.2}
-              duration={0.4}
+            <div 
               className="relative"
             >
               <div className="">
-                {/* <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1 h-6 rounded-full bg-teal-500" />
-                  <h3 className="sm:text-2xl text-xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500">{t("about.training")}</h3>
-                </div> */}
-                
                 <div className="grid grid-cols-4 sm:grid-cols-4 gap-3">
                   {educationDomains.map((domain) => (
                     <TabButton
@@ -253,17 +240,11 @@ export default function About() {
                   ))}
                 </div>
               </div>
-            </AnimatedSection>
+            </div>
             
             {/* Carte de spécialisation active */}
-            <div className={`transition-all duration-500 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-              <AnimatedSection 
-                direction='right'
-                threshold={0.1}
-                duration={0.4}
-              >
-                {renderDescription()}
-              </AnimatedSection>
+            <div className="transition-opacity duration-200">
+              {renderDescription()}
             </div>
           </div>
         </div>
