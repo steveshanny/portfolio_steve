@@ -1,10 +1,10 @@
-# Portfolio – Steve Ras
+# Portfolio – Steve Shanny
 <img src="public/images/steve_shanny.jpg" width="200" style="border-radius: 20px;" alt="Steve Shanny">
 
 Bienvenue sur mon portfolio !
 ## Présentation
 
-Je m’appelle **Steve Ras**. Je suis développeur fullstack passionné par la création d’applications web modernes, performantes et élégantes. Mon expertise s’étend de la conception UI/UX à l’implémentation backend, avec une forte appétence pour les technologies récentes et l’optimisation de l’expérience utilisateur.
+Je m’appelle **Steve Shanny**. Je suis développeur fullstack passionné par la création d’applications web modernes, performantes et élégantes. Mon expertise s’étend de la conception UI/UX à l’implémentation backend, avec une forte appétence pour les technologies récentes et l’optimisation de l’expérience utilisateur.
 ## Compétences principales
 
 - **Langages** : TypeScript, JavaScript, Java, PHP
@@ -29,8 +29,8 @@ Je m’appelle **Steve Ras**. Je suis développeur fullstack passionné par la c
 - **Certifications** : PIX, Huawei AI
 ## Contact
 
-- 📧 Email : steve.rasoafanirindraibe@gmail.com
-- 💼 LinkedIn : [linkedin.com/in/steve-rasoafanirindraibe](https://linkedin.com/in/steve-rasoafanirindraibe)
+- 📧 Email : steveshannyrasoafanirindraibe@gmail.com
+- 💼 LinkedIn : [linkedin.com/in/steve-shanny](https://linkedin.com/in/steve-shanny)
 - 📄 [Télécharger mon CV](public/documents/cv_steve_non_confidentiel.pdf)
 
 ---
