@@ -43,6 +43,8 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                             alt="Steve Shanny"
                             fill
                             priority
+                            fetchPriority="high"
+                            loading="eager"
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         </div>
