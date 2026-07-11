@@ -1,15 +1,18 @@
 "use client"
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useScroll } from '@/hooks/useScroll';
 import { useTranslation } from '@/hooks/useTranslation';
-import About from '@/components/sections/About';
-import Projects from '@/components/sections/Projects';
-import Skills from '@/components/sections/Skills';
-import Contact from '@/components/sections/Contact';
 import SideSocialLinks from '@/components/SideSocialLinks';
 import { Phone, Download, Code, Server, User, Globe, Home as HomeIcon } from 'lucide-react'; // Ajout de HomeIcon si besoin
 import AnimatedSection from '@/components/AnimatedSection';
 import AvailabilityIndicator from '@/components/AvailabilityIndicator';
+
+const About = dynamic(() => import('@/components/sections/About'), { ssr: false, loading: () => null });
+const Projects = dynamic(() => import('@/components/sections/Projects'), { ssr: false, loading: () => null });
+const Skills = dynamic(() => import('@/components/sections/Skills'), { ssr: false, loading: () => null });
+const Contact = dynamic(() => import('@/components/sections/Contact'), { ssr: false, loading: () => null });
 
 
 // Composant principal de la section Hero
@@ -121,6 +124,23 @@ export default function Home() {
 
   const { t, language, changeLanguage } = useTranslation();
   const scrollProgress = useScroll();
+  const [shouldLoadSections, setShouldLoadSections] = useState(false);
+
+  useEffect(() => {
+    const idleCallback = window.requestIdleCallback
+      ? window.requestIdleCallback(() => setShouldLoadSections(true))
+      : window.setTimeout(() => setShouldLoadSections(true), 400);
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        if (window.cancelIdleCallback) {
+          window.cancelIdleCallback(idleCallback);
+        } else {
+          window.clearTimeout(idleCallback);
+        }
+      }
+    };
+  }, []);
 
 
     // Placeholder pour les fonctions de défilement
@@ -253,23 +273,29 @@ export default function Home() {
         </div>
 
       <main className="relative w-full max-w-full min-h-screen overflow-x-hidden">
-        {/* Second block ----------------------------------------------------------------------------------------*/}
-        <div 
-          className="bg-gray-950 mt-6 sm:mt-10 w-full rounded-t-[50px_15px] sm:rounded-t-[100px_30px] lg:rounded-t-[280px_80px] shadow-glow-teal transition-all duration-400 ease-out"          
-        >
-          <section id="about"></section>
-          <About></About>
+        {shouldLoadSections ? (
+          <>
+            {/* Second block ----------------------------------------------------------------------------------------*/}
+            <div 
+              className="bg-gray-950 mt-6 sm:mt-10 w-full rounded-t-[50px_15px] sm:rounded-t-[100px_30px] lg:rounded-t-[280px_80px] shadow-glow-teal transition-all duration-400 ease-out"          
+            >
+              <section id="about"></section>
+              <About></About>
 
-          <section id="projects"></section>
-          <Projects/> 
-        </div>
+              <section id="projects"></section>
+              <Projects/> 
+            </div>
 
-        {/* Third block -----------------------------------------------------------------------------------------*/}
-        <section id="skills"></section>
-        <Skills></Skills>
+            {/* Third block -----------------------------------------------------------------------------------------*/}
+            <section id="skills"></section>
+            <Skills></Skills>
 
-        <section id="contacts"></section>
-        <Contact></Contact>
+            <section id="contacts"></section>
+            <Contact></Contact>
+          </>
+        ) : (
+          <div className="h-80 sm:h-96" />
+        )}
       </main>
     </div>
   );
