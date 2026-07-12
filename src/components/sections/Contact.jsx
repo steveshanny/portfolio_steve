@@ -77,7 +77,7 @@ export default function Contact() {
       id: 3,
       icon: <SiFacebook />,
       label: 'Facebook',
-      url: 'https://www.facebook.com/share/1BZTDSNAqN/',
+      url: 'https://www.facebook.com/steve.rasoafanirindraibe/',
       delay: 0.6
     },
     {
