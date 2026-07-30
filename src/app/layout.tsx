@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "PostgreSQL",
   ],
   verification: {
-    google: "google642748e7215fbf6d", // Google Search Console
+    google: "gIKpiDxIvOZ0IOQMEB-skVViTqTcmxnK8xGZ4stvlj0", // Google Search Console
   },
   applicationName: "Portfolio Steve",
   authors: [{ name: "Steve Shanny" }],
