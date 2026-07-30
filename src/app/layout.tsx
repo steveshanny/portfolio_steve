@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     "TypeScript",
     "PostgreSQL",
   ],
+  verification: {
+    google: "google642748e7215fbf6d", // Google Search Console
+  },
   applicationName: "Portfolio Steve",
   authors: [{ name: "Steve Shanny" }],
   creator: "Steve Shanny",
