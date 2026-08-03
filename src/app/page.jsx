@@ -102,8 +102,8 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                       <AnimatedSection direction='left' delay={0.5} duration={0.3} className='sm:hidden w-full flex justify-center items-center' >
                         <div>
                         <a 
-                          href='/documents/CV_steve_shanny.pdf' 
-                          download="Steve_Shanny_CV.pdf" 
+                          href='/documents/CV_Steve_Shanny_Pro.pdf' 
+                          download="CV_Steve_Shanny_Pro.pdf" 
                           className="flex items-center justify-center w-48 py-2 my-4 px-3 bg-gray-950 text-teal-300 rounded-lg text-xs font-semibold border border-teal-500/50 hover:bg-teal-500/40 transition duration-300"
                         > 
                           <Download className='mr-2 h-4 w-4' /> 
@@ -206,8 +206,8 @@ export default function Home() {
                 </button>
               ))}
               <a 
-                href='/documents/CV_steve_shanny.pdf' 
-                download="Steve_Shanny_CV.pdf" 
+                href='/documents/CV_Steve_Shanny_Pro.pdf' 
+                download="CV_Steve_Shanny_Pro.pdf" 
                 className="flex items-center py-1.5 px-3 bg-teal-500 text-gray-900 rounded-full text-xs font-semibold hover:bg-theme2 transition duration-300"
               > 
                 <Download className='mr-2 h-4 w-4' /> 
