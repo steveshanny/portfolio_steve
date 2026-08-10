@@ -93,7 +93,7 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                         </AnimatedSection>
                         {/* Bouton de contact */}
                         <AnimatedSection direction='left' delay={0.4} duration={0.3} className='mt-6 sm:mt-10'>
-                          <button className='px-5 sm:px-6 py-2 bg-teal-500/90 text-black text-xs sm:text-sm font-bold rounded-lg transition-all duration-300 hover:bg-theme2 hover:text-white transform hover:scale-105 shadow-lg'
+                          <button className='px-5 sm:px-6 py-2 bg-teal-500/90 text-black text-xs sm:text-sm font-bold rounded-lg transition-all duration-300 hover:bg-theme2 hover:text-white transform shadow-lg'
                               onClick={() => handleNavClick('contacts')} >
                               {t("hero.contact")}
                           </button>

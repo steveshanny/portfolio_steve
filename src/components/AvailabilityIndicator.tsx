@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { FaStar, FaUserTie } from 'react-icons/fa';
+import { FaUserTie } from 'react-icons/fa';
 import { useTranslation } from '@/hooks/useTranslation';
-import { BsLightningChargeFill } from 'react-icons/bs';
 
 const AvailabilityIndicator = () => {
   const { t } = useTranslation();
-  const [pulse, setPulse] = useState(false);
   const [glow, setGlow] = useState(false);
 
   useEffect(() => {
-    const pulseInterval = setInterval(() => {
-      setPulse(true);
-      setTimeout(() => setPulse(false), 1000);
-    }, 3000);
 
     const glowInterval = setInterval(() => {
       setGlow(!glow);
     }, 2000);
 
     return () => {
-      clearInterval(pulseInterval);
       clearInterval(glowInterval);
     };
   }, [glow]);
