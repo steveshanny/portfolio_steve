@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaUserTie } from 'react-icons/fa';
 import { useTranslation } from '@/hooks/useTranslation';
+import Image from 'next/image';
 
 const AvailabilityIndicator = () => {
   const { t } = useTranslation();
@@ -21,17 +22,9 @@ const AvailabilityIndicator = () => {
     <div className="relative group">
       {/* Conteneur principal */}
       <div className="relative h-16 w-18 flex items-center justify-center overflow-hidden">
-
-        {/* Cœur de l'animation - Avatar avec halo */}
-        <div className="relative z-10">
-          <div className={`relative w-8 h-8 rounded-full bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center transition-all duration-500 }`}>
-
-            <div className="relative">
-              <span className="text-md font-bold text-white">S</span>
-            </div>
-
-          </div>
-        </div>
+        <Image src="/apple-touch-icon.png" alt="Steve" width={33} height={33} className="rounded-full" />
+      </div>
+      <div>
       </div>
 
       {/* Tooltip - Visible au hover */}
