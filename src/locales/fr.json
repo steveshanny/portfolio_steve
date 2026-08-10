@@ -19,7 +19,7 @@
   "about": {
     "title": "À Propos",
     "subtitle": "À Propos de moi et mon parcours",
-    "description": "Je suis un architecte du numérique, un passionné obsédé par la magie qui se cache derrière chaque ligne de code. Mon royaume? L'intersection entre la logique implacable des algorithmes et la créativité sans limites du web moderne. Je crois fermement que les meilleures applications ne sont pas celles qui fonctionnent parfaitement, mais celles qui résolvent des problèmes réels avec une élégance discrète. Mon approche? Transformer la complexité technique en simplicité utilisateur." ,
+    "description": "Je suis un architecte du numérique, un passionné obsédé par la magie qui se cache derrière chaque ligne de code. Mon royaume? L'intersection entre la logique implacable des algorithmes et la créativité sans limites du web moderne. Je crois fermement que les meilleures applications ne sont pas celles qui fonctionnent parfaitement, mais celles qui résolvent des problèmes réels avec une élégance discrète. Mon approche? Transformer la complexité technique en simplicité utilisateur. J'étudie actuellement la science des données et l'IA.",
     "badge": "Qui je suis",
     "role": "Développeur Web",
     "solver": "Résolveur de problèmes",
@@ -165,7 +165,7 @@
     "networksTitle": "Réseaux & Sécurité",
     "networks": "Maîtrise des fondamentaux réseaux : configuration Cisco, routage (RIP, EIGRP), NAT et gestion d'adressage IP pour des infrastructures.",    
     "aiTitle": "Intelligence Artificielle",
-    "ai": "Exploration des technologies d'intelligence artificielle et leur intégration dans des applications innovantes."
+    "ai": "Exploration des technologies d'intelligence artificielle et leur intégration dans des applications innovantes. Je suis en Master I de science des données et de l'intelligence artificielle."
   },
   "copyright":{
     "text":"Tous droits réservés."

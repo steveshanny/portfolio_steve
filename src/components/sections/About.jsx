@@ -22,25 +22,25 @@ import AnimatedSection from '@/components/AnimatedSection';
 // Définition des domaines avec icônes améliorées
 const educationDomains = [
   { 
+    key: 'ai', 
+    icon: FaBrain, 
+    accentColor: 'orange'
+  },
+  { 
     key: 'uiux', 
     icon: FaPalette, 
     accentColor: 'purple'
   },
   { 
     key: 'academic', 
-    icon: FaUniversity, 
+    icon: FaUniversity,   
     accentColor: 'teal'
   },
   { 
     key: 'networks', 
     icon: FaGlobeAmericas, 
     accentColor: 'blue'
-  },
-  { 
-    key: 'ai', 
-    icon: FaBrain, 
-    accentColor: 'orange'
-  },
+  }
 ];
 
 // Composant pour les boutons de navigation (Onglets) amélioré
@@ -48,11 +48,11 @@ const TabButton = ({ isActive, icon: Icon, onClick, children, color, accentColor
   <button
     onClick={onClick}
     className={`
-      group relative flex items-center p-1 rounded-t-xl transition-all duration-500
+      group relative flex items-center p-1 rounded-t-xl
       overflow-hidden flex-1 min-w-0 sm:min-w-[80px] justify-center
       ${isActive 
         ? `bg-teal-950/70 text-white ${accentColor === 'purple' ? 'shadow-purple-500/30' : accentColor === 'teal' ? 'shadow-teal-500/30' : accentColor === 'blue' ? 'shadow-blue-500/30' : 'shadow-orange-500/30'}`
-        : 'bg-gray-900/50 text-gray-400 hover:bg-gray-800/70 '
+        : 'bg-gray-900/50 text-gray-400 hover:bg-gray-900'
       }
     `}
   >
@@ -76,7 +76,6 @@ const TabButton = ({ isActive, icon: Icon, onClick, children, color, accentColor
 
 // Composant Carte amélioré
 const DomainCard = ({ title, description, icons, accentColor }) => {
-  // const [isHovered, setIsHovered] = useState(false);
   
   return (
     <div className="w-full h-full bg-gradient-to-b from-teal-950/70 to-gray-950/90 pb-8 px-8 sm:rounded-br-2xl rounded-b-2xl">
@@ -99,7 +98,7 @@ const DomainCard = ({ title, description, icons, accentColor }) => {
           </div>
           
           {/* Description */}
-          <p className="text-gray-300 leading-relaxed mb-6">
+          <p className="text-gray-300 leading-7 mb-6">
             {description}
           </p>
           
@@ -159,21 +158,19 @@ export default function About() {
   };
 
   return (
-    <div className="flex w-full justify-center text-white pt-14 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="flex h-full w-full justify-center text-white pt-14 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       
       
-      <div className=" sm:w-[85%] max-w-6xl mx-auto">
+      <div className="sm:w-[85%] max-w-6xl mx-auto">
         {/* En-tête amélioré */}
          <AnimatedSection direction='scale' duration={0.4} threshold={0.1}>
             <div className='mb-6 sm:mb-14'>
-             <h2 className='text-2xl sm:text-4xl font-extrabold text-center'>
-               <span className="text-theme2">&lt;</span>
-               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("about.title")}</span>
-              <span className="text-theme2">/&gt;</span>
-             </h2>
-             <div className="w-12 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
-            <p className="text-gray-500 mt-3 text-center">{t("about.subtitle")}</p>
-
+              <h2 className='text-2xl sm:text-4xl font-extrabold text-center'>
+                <span className="text-theme2">&lt;</span>
+                <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("about.title")}</span>
+                <span className="text-theme2">/&gt;</span>
+              </h2>            
+              <div className="w-16 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
            </div>
          </AnimatedSection>
         
@@ -181,22 +178,22 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10">
           {/* Colonne Gauche - Introduction */}
           <AnimatedSection 
-            className="h-full"
+            className="sm:h-[360px]"
             direction='scale'
             threshold={0.2}
             duration={0.4}
           >
-            <div className="relative p-4 sm:p-6 rounded-2xl h-full">
+            <div className="relative p-4 sm:pb-6 sm:px-6 rounded-2xl h-full">
               {/* Carte avec effet verre */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-950 
                 backdrop-blur-xl rounded-l-2xl shadow-2xl" />
               
               <div className="relative z-10">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full  border border-gray-200/30 
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200/30 
                   backdrop-blur-sm mb-6">
                   <FaUserAlt className="text-teal-400 text-sm" />
-                  <span className="text-xs font-medium text-teal-500">{t("about.badge")} ?</span>
+                  <span className="text-sm font-medium text-teal-500">{t("about.badge")} ?</span>
                 </div>
                 
                 {/* Titre */}
@@ -204,22 +201,20 @@ export default function About() {
                   <span className="">
                     {t("about.role")} & {t("about.solver")}
                   </span>
-                  {" "} & {}
                 </h3>
                 
                 {/* Description */}
                 <div className="space-y-4">
-                  <p className="text-gray-300 to-gray-200 leading-relaxed text-justify text-sm sm:text-md">
+                  <p className="text-gray-200 text-sm sm:text-base sm:!leading-7 text-justify">
                     {t("about.description")}
                   </p>
-
                 </div>
               </div>
             </div>
           </AnimatedSection>
           
           {/* Colonne Droite - Spécialisations */}
-          <div className="">
+          <div className="sm:h-[360px]">
             {/* Navigation par onglets améliorée */}
             <div 
               className="relative"
@@ -243,7 +238,7 @@ export default function About() {
             </div>
             
             {/* Carte de spécialisation active */}
-            <div className="transition-opacity duration-200">
+            <div className="transition-opacity duration-200 h-full">
               {renderDescription()}
             </div>
           </div>

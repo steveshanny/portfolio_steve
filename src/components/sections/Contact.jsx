@@ -181,9 +181,7 @@ export default function Contact() {
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >Contact</span>
               <span className="text-theme2">/&gt;</span>
             </h2>
-            <div className="w-12 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
-            <p className="text-gray-400 mt-3 text-center">{t("contact.subtitle")}</p>
-
+            <div className="w-16 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
           </div>
         </AnimatedSection>
 

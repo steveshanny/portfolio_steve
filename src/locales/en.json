@@ -19,7 +19,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "About me and my education",
-    "description": "I'm a digital architect, a passionate soul obsessed with the magic behind every line of code. My kingdom? The intersection between the relentless logic of algorithms and the boundless creativity of the modern web.I firmly believe that the best applications aren't those that work perfectly, but those that solve real problems with discreet elegance. My approach? Transforming technical complexity into user simplicity.",
+    "description": "I'm a digital architect, a passionate soul obsessed with the magic behind every line of code. My kingdom? The intersection between the relentless logic of algorithms and the boundless creativity of the modern web.I firmly believe that the best applications aren't those that work perfectly, but those that solve real problems with discreet elegance. My approach? Transforming technical complexity into user simplicity. I'm currently studying data science and AI.",
     "badge": "Who I am",
     "role": "Web Developer",
     "solver": "Problem Solver",
@@ -166,7 +166,7 @@
     "networksTitle": "Networks & Security",
     "networks": "Networks\nMastery of network fundamentals: Cisco configuration, routing (RIP, EIGRP), NAT and IP address management for infrastructures.",    
     "aiTitle": "Artificial Intelligence",
-    "ai": "Exploration of artificial intelligence technologies and their integration into innovative applications."
+    "ai": "Exploration of artificial intelligence technologies and their integration into innovative applications. I'm currently in Master I of Data Science and Artificial Intelligence."
   },
   "copyright":{
     "text":" All rights reserved."

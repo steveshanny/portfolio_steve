@@ -25,23 +25,23 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                 
                 {/* ----------------- 1. Bloc de l'image de profil (5/12) ----------------- */}
                 <div 
-                    className="relative py-6 sm:py-0 overflow-visible z-10 w-full sm:w-5/12 h-full flex justify-center items-center duration-400 ease-out"
+                    className="relative sm:py-6 pt-3 overflow-visible z-10 w-full sm:w-4/12 h-full flex justify-center items-center duration-400 ease-out"
                 >
-                    <div className="relative p-2 rounded-tr-full rounded-tl-full rounded-bl-full hover:scale-105 transition-scale duration-500 ease-in">
+                    <div className="relative p-2 rounded-tr-full rounded-tl-full rounded-bl-full transition-scale duration-500 ease-in">
                       
                       {/* Badge Disponible */}
                       <AnimatedSection delay={2} direction='scale' className="hidden sm:block h-full absolute top-6 -left-4 z-20 px-2">
                           <div className="flex items-center gap-1.5 px-2 py-1 border border-green-500 bg-black/50 rounded-full shadow-lg shadow-green-500/30 animate-pulse-subtle">
                               <span className="sm:text-[10px] text-[9px] font-bold text-white tracking-wide">
-                                  {t('hero.available')}
+                                {t('hero.available')}
                               </span>
                               <div className="w-1 h-1 bg-green-500 rounded-full animate-ping-slow"></div>
 
                           </div>
                       </AnimatedSection>
-                      <div className="rounded-full rounded-br-xl p-1 sm:p-2 w-40 h-40 sm:w-80 sm:h-96">
+                      <div className="sm:rounded-full sm:rounded-br-xl p-1 sm:p-2 w-64 h-64 sm:w-64 sm:h-[395px]">
                           <Image
-                            className='w-full h-full object-cover rounded-br-xl rounded-full'
+                            className='w-full h-full object-cover rounded-2xl sm:rounded-br-xl sm:rounded-full'
                             src="/images/steve_shanny.jpeg"
                             alt="Steve Shanny"
                             fill
@@ -55,11 +55,11 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                 </div>
 
                 {/* ----------------- 2. Bloc du titre et des boutons (7/12) ----------------- */}
-                <div className="w-full sm:w-7/12 h-full flex justify-center sm:justify-start items-center px-0 sm:px-0 z-10 mt-6 sm:mt-0">
+                <div className="w-full sm:w-8/12 h-full flex justify-center sm:justify-start items-center px-0 sm:px-0 z-10 mt-6 sm:mt-0">
                   <div className="text-center sm:text-left">
                     <div>
                       {/* --- Ligne d'accroche et Nom (Style Terminal/Code) --- */}
-                      <AnimatedSection direction='left' duration={0.3} className='text-xs sm:text-lg font-mono mb-3 sm:mb-4'>
+                      <AnimatedSection direction='left' duration={0.3} className='text-xs sm:text-lg font-mono mb-3 sm:mb-4 sm:transform sm:-translate-x-20 '>
                         <span className="text-gray-400">{t("hero.greeting")}</span>
                         
                         {/* Nom stylisé comme une balise ou un élément de code */}
@@ -78,14 +78,14 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                             <span className="clignoter font-bold text-teal-400">_</span>
                         </AnimatedSection>
                         {/* Bloc "Tech Tag Cloud" */}
-                        <AnimatedSection direction='left' delay={0.3} duration={0.3} className="my-4 sm:my-8 sm:mr-16 p-3 sm:p-4 bg-teal-700/10 rounded-xl shadow-inner shadow-teal-500/20 max-w-lg">
-                            <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start'>
+                        <AnimatedSection direction='left' delay={0.3} duration={0.3} className="my-4 sm:my-8 sm:mr-16 p-3 sm:p-6 bg-teal-700/10 rounded-2xl shadow-inner shadow-teal-300/20 max-w-3xl">
+                            <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start pb-2'>
                               <Code className='mr-2 h-3 w-3 sm:h-4 sm:w-4' />
                               {t('hero.expertise')}
                             </h3>
                             <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center sm:justify-start">
                                 {techStack.map((tech, index) => (
-                                    <span key={index} className="px-2 sm:px-3 py-1 text-sm font-medium text-teal-100 bg-gray-900 rounded-full border border-teal-500/50 hover:bg-gray-950 transition duration-300 cursor-default">
+                                    <span key={index} className="px-2 sm:px-3 py-1 text-sm font-medium text-teal-100 bg-gray-900 border border-teal-500/50 hover:bg-gray-950 transition duration-300 cursor-default">
                                       {tech}
                                     </span>
                                 ))}
