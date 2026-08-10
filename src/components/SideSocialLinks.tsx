@@ -26,7 +26,7 @@ const SideSocialLinks = () => {
       icon: Mail,
       href: "mailto:steveshannyrasoafanirindraibe@gmail.com",
       label: "Email",
-      color: "hover:text-teal-500"
+      color: "hover:text-red-500"
     }
   ];
 
@@ -35,7 +35,7 @@ const SideSocialLinks = () => {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 2 }}
-      className="fixed left-6 top-[72px] transform -translate-y-1/2 z-50 hidden lg:block"
+      className="fixed left-6 top-1/4 -translate-y-1/2 z-50 hidden lg:block"
     >
       <div className="flex flex-col items-center space-y-6">
         {/* Ligne verticale */}
@@ -51,10 +51,6 @@ const SideSocialLinks = () => {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 1.2 + index * 0.1 }}
-            whileHover={{ 
-              scale: 1.2,
-              y: -2
-            }}
             className={`text-gray-600 dark:text-gray-400 transition-all duration-300 ${social.color}`}
             aria-label={social.label}
           >
