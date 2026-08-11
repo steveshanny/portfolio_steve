@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { 
   FaEnvelope, FaLinkedin, FaGithub, FaGlobe, 
-  FaStarHalfAlt, FaUser, FaComment, FaPaperPlane, 
-  FaStar, FaPhone, FaMapMarkerAlt, FaCheck, 
+  FaUser, FaComment, FaPaperPlane, 
+  FaPhone, FaMapMarkerAlt, FaCheck, 
   FaExternalLinkAlt, FaCopy
 } from 'react-icons/fa';
-import { SiUpwork, SiFiverr, SiFacebook } from 'react-icons/si';
+import { SiFiverr, SiFacebook } from 'react-icons/si';
 import emailjs from '@emailjs/browser';
 import AnimatedSection from '@/components/AnimatedSection';
 import { useModernAlert } from '@/components/ModernAlert';
@@ -29,6 +29,12 @@ export default function Contact() {
     TEMPLATE_AUTO_REPLY: 'template_vz9h3rv', 
     USER_ID: 'MK-TmMeFEG4l1LxG_'
   };
+
+  useEffect(() => {
+    if (EMAILJS_CONFIG.USER_ID) {
+      emailjs.init(EMAILJS_CONFIG.USER_ID);
+    }
+  }, []);
 
   const contactInfo = [
     {
@@ -159,6 +165,7 @@ export default function Contact() {
       });
 
     } catch (error) {
+      console.error('EmailJS error:', error);
       showAlert(t('contact.error'), "error");
     } finally {
       setIsLoading(false);
@@ -173,7 +180,7 @@ export default function Contact() {
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl'></div>
       </div>
 
-      <div className='footer-section relative z-10 w-full h-auto items-center py-8 sm:pt-20 px-4'>
+      <div className='footer-section relative z-10 w-full h-auto items-center py-8 sm:py-28 px-4'>
         <AnimatedSection direction='scale' duration={0.5} threshold={0.1}>
           <div className='mb-0 sm:mb-14'>
             <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
@@ -348,7 +355,6 @@ export default function Contact() {
                         <>
                           <FaPaperPlane className='mr-3 text-sm group-hover:rotate-45 transition-transform duration-500 text-white' />
                           <span className='text-white'>{t('contact.send')}</span>
-                          <FaStar className='ml-3 w-0 group-hover:w-5 transition-all duration-700 ease-out text-yellow-300' />
                         </>
                       )}
                     </div>
