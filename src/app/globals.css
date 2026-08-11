@@ -148,24 +148,40 @@ html {
 
 
 .footer-section {
-    position: relative; 
-    overflow: hidden; 
-    z-index: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
+/* Background image */
 .footer-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        linear-gradient(to right, rgba(0, 5, 17, 0.582),rgba(0, 5, 17, 0.712), rgba(4, 48, 46, 0.705)),
-        url('/images/image-1.png');
+    inset: -10px;
+
+    background-image: url('/images/couverture.webp');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
+
+    filter: blur(4px);
+
+    z-index: -2;
+}
+
+/* Gradient overlay */
+.footer-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 5, 17, 0.582),
+        rgba(0, 5, 17, 0.712),
+        rgba(4, 48, 46, 0.705)
+    );
+
     z-index: -1;
 }
 

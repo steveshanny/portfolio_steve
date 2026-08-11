@@ -179,14 +179,22 @@ export default function Skills() {
   ];
 
   const certifications = [
-    {
-      title: t("skills.certifications.pix.title"),
-      institution: t("skills.certifications.pix.institution"),
-      description: t("skills.certifications.pix.description"),
-      icon: FaGraduationCap,
-      imageUrl: '/images/certification-pix-2025.jpg',
-      certUrl: 'https://pix.fr',
+      {
+      title: t("skills.certifications.javascript.title"),
+      institution: t("skills.certifications.javascript.institution"),
+      description: t("skills.certifications.javascript.description"),
+      icon: SiJavascript,
+      imageUrl: '/images/certification-js.webp',
+      certUrl: 'https://www.javascript.com',
     },
+    // {
+    //   title: t("skills.certifications.pix.title"),
+    //   institution: t("skills.certifications.pix.institution"),
+    //   description: t("skills.certifications.pix.description"),
+    //   icon: FaGraduationCap,
+    //   imageUrl: '/images/certification-pix-2025.jpg',
+    //   certUrl: 'https://pix.fr',
+    // },
     {
       title: t("skills.certifications.huawei.title"),
       institution: t("skills.certifications.huawei.institution"),
@@ -195,10 +203,11 @@ export default function Skills() {
       imageUrl: '/images/certification-Overview-IA-2025.png',
       certUrl: 'https://e.huawei.com',
     },
+
   ];
 
   return (
-    <div className='min-h-screen w-full px-4 sm:px-16 lg:px-48 pt-12 sm:pt-28 sm:pb-6 bg-gradient-to-r from-gray-950 via-gray-950 to-teal-950 text-white'>
+    <div className='min-h-screen w-full px-4 sm:px-16 lg:px-48 pt-12 sm:pt-40 sm:pb-6 bg-gradient-to-r from-gray-950 via-gray-950 to-teal-950 text-white'>
       <section id='skills' className='absolute -top-20' />
       
         {/* Header Compact */}

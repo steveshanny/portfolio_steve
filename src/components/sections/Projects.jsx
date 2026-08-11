@@ -60,7 +60,7 @@ const FeaturedProject = ({ project, index, t, showAlert }) => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto pt-10 sm:pt-20 border-b border-white/5 last:border-0">
+    <div className="w-full max-w-5xl mx-auto pt-10 sm:pt-32 border-b border-white/5 last:border-0">
       <div className={`flex flex-col ${isRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-6 md:gap-14`}>
         
         {/* IMAGE SLIDER (Compact) */}
@@ -209,7 +209,7 @@ export default function Projects() {
         
         {/* Header Compact */}
         <AnimatedSection direction='scale' duration={0.5} threshold={0.1}>
-          <div className='mb-0 sm:mb-14'>
+          <div className='sm:mt-16'>
             <h2 className='text-xl sm:text-4xl font-extrabold text-center text-gray-300'>
               <span className="text-theme2">&lt;</span>
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("projects.title")}</span>
@@ -221,7 +221,7 @@ export default function Projects() {
 
 
         {/* SECTION 1: FEATURED (01, 02, 04) */}
-        <div className="flex flex-col gap-6 sm:gap-0 sm:mb-14 sm:pb-0 pb-12">
+        <div className="flex flex-col gap-6 sm:gap-0 sm:mb-14 sm:pb-16 pb-12">
           {featuredProjects.map((project, index) => (
              <AnimatedSection key={project.id} direction="scale" threshold={0.3} delay={0.1} duration={0.4}>
                 <FeaturedProject project={project} index={index} t={t} showAlert={showAlert} />

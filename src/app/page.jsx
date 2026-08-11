@@ -42,7 +42,7 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                       <div className="sm:rounded-full sm:rounded-br-xl p-1 sm:p-2 w-48 h-48 sm:w-64 sm:h-[395px]">
                           <Image
                             className='w-full h-full object-cover rounded-3xl sm:rounded-br-xl sm:rounded-full'
-                            src="/images/steve_shanny.jpeg"
+                            src="/images/steve-profil.webp"
                             alt="Steve Shanny"
                             fill
                             priority
