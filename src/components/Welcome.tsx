@@ -27,7 +27,7 @@ export default function Welcome({ onEnter }: { onEnter: () => void }) {
           {/* Sélecteur de langue en haut à droite */}
           <div className="flex justify-between mb-4 sm:mt-8 mt-4 items-center">
             <div className='flex items-center text-sm sm:text-lg' >
-                <Image src={"/images/steve_shanny.jpg"} className='rounded-full mr-3' width={30} height={30} alt='Steve Rasoafanirindraibe' priority></Image>
+                <Image src={"/images/steve-profil.webp"} className='rounded-full mr-3' width={30} height={30} alt='Steve Rasoafanirindraibe' priority></Image>
                 <div>Steve Shanny</div>
                 
             </div>

@@ -117,6 +117,11 @@
         "title": "AI Overview",
         "institution": "Huawei ICT Academy",
         "description": "Fundamentals of Artificial Intelligence, Machine Learning, Deep Learning, and AI applications."
+      },
+      "javascript": {
+        "title": "JavaScript Certification",
+        "institution": "JavaScript Official Badge",
+        "description": "Verified understanding of modern JavaScript concepts, syntax and best practices."
       }
     }
   },

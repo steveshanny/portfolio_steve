@@ -175,13 +175,13 @@ export default function Contact() {
 
       <div className='footer-section relative z-10 w-full h-auto items-center py-8 sm:pt-20 px-4'>
         <AnimatedSection direction='scale' duration={0.5} threshold={0.1}>
-          <div className='mb-8 sm:mb-10'>
-            <h2 className='text-2xl sm:text-4xl font-extrabold text-center'>
+          <div className='mb-0 sm:mb-14'>
+            <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
               <span className="text-theme2">&lt;</span>
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >Contact</span>
               <span className="text-theme2">/&gt;</span>
             </h2>
-            <div className="w-16 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
+            <div className="sm:w-16 w-10 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-2"></div>
           </div>
         </AnimatedSection>
 
@@ -267,7 +267,7 @@ export default function Contact() {
             <AnimatedSection direction='scale' threshold={0.1} duration={0.4}>
               <div className='bg-black/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl'>
                 <div className='mb-6'>
-                  <h3 className='text-md sm:text-xl font-bold text-gray-300 mb-2 text-center'>
+                  <h3 className='text-sm sm:text-xl font-bold text-gray-300 mb-2 text-center'>
                     {t('contact.formTitle')}
                   </h3>
                   <p className='text-gray-400 text-sm text-center'>

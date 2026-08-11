@@ -1,5 +1,5 @@
 # Portfolio – Steve Shanny
-<img src="public/images/steve_shanny.jpg" width="200" style="border-radius: 20px;" alt="Steve Shanny">
+<img src="public/images/steve-profil.webp" width="200" style="border-radius: 20px;" alt="Steve Shanny">
 
 Bienvenue sur mon portfolio !
 ## Présentation

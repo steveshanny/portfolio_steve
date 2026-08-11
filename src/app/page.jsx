@@ -18,13 +18,13 @@ const Contact = dynamic(() => import('@/components/sections/Contact'), { ssr: fa
 // Composant principal de la section Hero
 const HeroContent = ({ handleNavClick, t, techStack }) => {
     return (
-        <div className="w-full h-full font-inter bg-gradient-to-br from-teal-950/90 via-gray-950 to-teal-950/90 text-white">
+        <div className="w-full h-full font-inter bg-gradient-to-br from-teal-950 via-gray-950 to-teal-950 text-white">
             
             {/* --- Hero Content Block --- */}
             <div className="min-h-[500px] h-auto xl:min-h-[600px] w-full flex flex-col sm:flex-row items-center pt-6 sm:pt-6 relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-0">
                 
                 {/* ----------------- 1. Bloc de l'image de profil (5/12) ----------------- */}
-                <div 
+                <div
                     className="relative sm:py-6 pt-3 overflow-visible z-10 w-full sm:w-4/12 h-full flex justify-center items-center duration-400 ease-out"
                 >
                     <div className="relative p-2 rounded-tr-full rounded-tl-full rounded-bl-full transition-scale duration-500 ease-in">
@@ -39,10 +39,10 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
 
                           </div>
                       </AnimatedSection>
-                      <div className="sm:rounded-full sm:rounded-br-xl p-1 sm:p-2 w-64 h-64 sm:w-64 sm:h-[395px]">
+                      <div className="sm:rounded-full sm:rounded-br-xl p-1 sm:p-2 w-48 h-48 sm:w-64 sm:h-[395px]">
                           <Image
-                            className='w-full h-full object-cover rounded-2xl sm:rounded-br-xl sm:rounded-full'
-                            src="/images/steve_shanny.jpeg"
+                            className='w-full h-full object-cover rounded-3xl sm:rounded-br-xl sm:rounded-full'
+                            src="/images/steve-profil.webp"
                             alt="Steve Shanny"
                             fill
                             priority
@@ -73,19 +73,19 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                       </AnimatedSection>
                     </div>
                         {/* Titre & Slogan */}
-                        <AnimatedSection direction='left' delay={0.2} duration={0.3} className="py-2 sm:py-3 text-base sm:text-3xl font-mono italic text-gray-300">
+                        <AnimatedSection direction='left' delay={0.2} duration={0.3} className="py-2 sm:py-3 text-sm sm:text-3xl font-mono italic text-gray-300">
                             <span className="text-gray-300">{t("hero.title")}</span>
                             <span className="clignoter font-bold text-teal-400">_</span>
                         </AnimatedSection>
                         {/* Bloc "Tech Tag Cloud" */}
                         <AnimatedSection direction='left' delay={0.3} duration={0.3} className="my-4 sm:my-8 sm:mr-16 p-3 sm:p-6 bg-teal-700/10 rounded-2xl shadow-inner shadow-teal-300/20 max-w-3xl">
-                            <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start pb-2'>
+                            <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start sm:pb-2'>
                               <Code className='mr-2 h-3 w-3 sm:h-4 sm:w-4' />
                               {t('hero.expertise')}
                             </h3>
-                            <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center sm:justify-start">
+                            <div className="flex flex-wrap gap-1 sm:gap-2 justify-center sm:justify-start">
                                 {techStack.map((tech, index) => (
-                                    <span key={index} className="px-2 sm:px-3 py-1 text-sm font-medium text-teal-100 bg-gray-900 border border-teal-500/50 hover:bg-gray-950 transition duration-300 cursor-default">
+                                    <span key={index} className="px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium text-teal-100 bg-gray-900 border border-teal-500/50 hover:bg-gray-950 transition duration-300 cursor-default">
                                       {tech}
                                     </span>
                                 ))}

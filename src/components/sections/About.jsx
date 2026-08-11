@@ -44,7 +44,7 @@ const educationDomains = [
 ];
 
 // Composant pour les boutons de navigation (Onglets) amélioré
-const TabButton = ({ isActive, icon: Icon, onClick, children, color, accentColor }) => (
+const TabButton = ({ isActive, icon: Icon, onClick, children, accentColor }) => (
   <button
     onClick={onClick}
     className={`
@@ -57,15 +57,14 @@ const TabButton = ({ isActive, icon: Icon, onClick, children, color, accentColor
     `}
   >
     
-    
     <div className="relative flex flex-col sm:flex-row items-center gap-3 z-10">
-      <div className={`sm:hidden block p-2 rounded-lg ${isActive ? 'bg-white/20' : 'bg-gray-800/50'}`}>
+      <div className={`sm:hidden block p-1.5 rounded-lg `}>
         <Icon 
           className={`transition-all duration-500 ${isActive ? 'text-white scale-110' : 'text-gray-400 group-hover:text-white'}`} 
-          size={20} 
+          size={18} 
         />
       </div>
-      <span className={`sm:block hidden p-2 text-md font-semibold truncate transition-all duration-500
+      <span className={`sm:block hidden p-2 text-sm sm:text-md font-semibold truncate transition-all duration-500
         ${isActive ? 'text-white' : 'group-hover:text-gray-200'}`}>
         {children}
       </span>
@@ -78,27 +77,27 @@ const TabButton = ({ isActive, icon: Icon, onClick, children, color, accentColor
 const DomainCard = ({ title, description, icons, accentColor }) => {
   
   return (
-    <div className="w-full h-full bg-gradient-to-b from-teal-950/70 to-gray-950/90 pb-8 px-8 sm:rounded-br-2xl rounded-b-2xl">
+    <div className="w-full h-full bg-gradient-to-b from-teal-950/70 to-gray-950 pb-8 px-8 sm:rounded-br-2xl rounded-b-2xl">
       <div 
         className="relative rounded-2xl overflow-hidden transition-all duration-700 h-full group"
       >
         <div className="relative z-10">
           {/* En-tête avec icône */}
-          <div className="flex items-center gap-4 my-6">
-            <div className={`p-3 rounded-xl bg-theme2 shadow-lg`}>
+          <div className="flex items-center sm:gap-4 gap-2 sm:my-6 my-4">
+            <div className={`sm:p-3 p-2 rounded-xl bg-theme2 shadow-lg`}>
               {icons[0] && icons[0]({ className: "text-white text-xl" })}
             </div>
             <div>
-              <h3 className="sm:text-lg text-md font-bold text-gray-300 mb-1">{title}</h3>
+              <h3 className="text-sm sm:text-lg font-bold text-gray-300 sm:mb-1 mb-0.5">{title}</h3>
               <div className="flex items-center gap-2">
                 <div className={`w-8 h-0.5 bg-theme2 rounded-full`} />
-                <span className="text-xs text-gray-400 font-medium">SPECIALIZATION</span>
+                <span className="sm:text-xs text-[9px] text-gray-400 font-medium">SPECIALIZATION</span>
               </div>
             </div>
           </div>
           
           {/* Description */}
-          <p className="text-gray-300 leading-7 mb-6">
+          <p className="text-sm sm:text-base text-gray-300 sm:leading-7 mb-6 sm:h-40">
             {description}
           </p>
           
@@ -158,19 +157,19 @@ export default function About() {
   };
 
   return (
-    <div className="flex h-full w-full justify-center text-white pt-14 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="flex h-full w-full justify-center text-white pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       
       
       <div className="sm:w-[85%] max-w-6xl mx-auto">
         {/* En-tête amélioré */}
          <AnimatedSection direction='scale' duration={0.4} threshold={0.1}>
-            <div className='mb-6 sm:mb-14'>
-              <h2 className='text-2xl sm:text-4xl font-extrabold text-center'>
+            <div className='mb-0 sm:mb-14'>
+              <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
                 <span className="text-theme2">&lt;</span>
                 <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("about.title")}</span>
                 <span className="text-theme2">/&gt;</span>
               </h2>            
-              <div className="w-16 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
+              <div className="sm:w-16 w-10 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-2"></div>
            </div>
          </AnimatedSection>
         
@@ -186,18 +185,18 @@ export default function About() {
             <div className="relative p-4 sm:pb-6 sm:px-6 rounded-2xl h-full">
               {/* Carte avec effet verre */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-950 
-                backdrop-blur-xl rounded-l-2xl shadow-2xl" />
+                backdrop-blur-xl rounded-l-2xl shadow-2xl"/>
               
               <div className="relative z-10">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200/30 
-                  backdrop-blur-sm mb-6">
-                  <FaUserAlt className="text-teal-400 text-sm" />
-                  <span className="text-sm font-medium text-teal-500">{t("about.badge")} ?</span>
+                <div className="inline-flex items-center gap-2 sm:px-4 sm:py-2 px-2 py-1 rounded-full border border-gray-200/30 
+                  backdrop-blur-sm sm:mb-6 mb-3">
+                  <FaUserAlt className="text-teal-400 text-xs sm:text-sm" />
+                  <span className="sm:text-sm text-xs font-medium text-teal-500">{t("about.badge")} ?</span>
                 </div>
                 
                 {/* Titre */}
-                <h3 className="sm:text-xl text-md font-bold mb-4  text-gray-300">
+                <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-gray-300">
                   <span className="">
                     {t("about.role")} & {t("about.solver")}
                   </span>
@@ -227,7 +226,6 @@ export default function About() {
                       isActive={activeTab === domain.key}
                       icon={domain.icon}
                       onClick={() => handleTabChange(domain.key)}
-                      color={domain.color}
                       accentColor={domain.accentColor}
                     >
                       {t(`sections.${domain.key}`)}

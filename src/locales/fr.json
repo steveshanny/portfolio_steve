@@ -116,6 +116,11 @@
         "title": "Overview IA",
         "institution": "Huawei ICT Academy",
         "description": "Fondamentaux de l'Intelligence Artificielle, Machine Learning, Deep Learning et applications IA."
+      },
+      "javascript": {
+        "title": "Certification JavaScript",
+        "institution": "Badge Officiel JavaScript",
+        "description": "Compréhension vérifiée des concepts modernes de JavaScript, de la syntaxe et des bonnes pratiques."
       }
     }
   },

@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     siteName: "Portfolio Steve",
     type: "website",
     locale: "fr_FR",
-    images: [{ url: "/images/steve_shanny.jpg", width: 1200, height: 630, alt: "Steve Shanny" }],
+    images: [{ url: "/images/steve-profil.webp", width: 1200, height: 630, alt: "Steve Shanny" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Steve Shanny | Développeur Full-Stack & IA",
     description:
       "Portfolio de Steve Shanny, développeur full-stack spécialisé en Next.js, React, Spring Boot et bases de données modernes.",
-    images: ["/images/steve_shanny.jpg"],
+    images: ["/images/steve-profil.webp"],
   },
   icons: {
     icon: [
