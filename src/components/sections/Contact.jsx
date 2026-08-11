@@ -267,7 +267,7 @@ export default function Contact() {
             <AnimatedSection direction='scale' threshold={0.1} duration={0.4}>
               <div className='bg-black/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl'>
                 <div className='mb-6'>
-                  <h3 className='text-md sm:text-xl font-bold text-gray-300 mb-2 text-center'>
+                  <h3 className='text-sm sm:text-xl font-bold text-gray-300 mb-2 text-center'>
                     {t('contact.formTitle')}
                   </h3>
                   <p className='text-gray-400 text-sm text-center'>

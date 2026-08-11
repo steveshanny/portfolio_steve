@@ -73,19 +73,19 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                       </AnimatedSection>
                     </div>
                         {/* Titre & Slogan */}
-                        <AnimatedSection direction='left' delay={0.2} duration={0.3} className="py-2 sm:py-3 text-base sm:text-3xl font-mono italic text-gray-300">
+                        <AnimatedSection direction='left' delay={0.2} duration={0.3} className="py-2 sm:py-3 text-sm sm:text-3xl font-mono italic text-gray-300">
                             <span className="text-gray-300">{t("hero.title")}</span>
                             <span className="clignoter font-bold text-teal-400">_</span>
                         </AnimatedSection>
                         {/* Bloc "Tech Tag Cloud" */}
                         <AnimatedSection direction='left' delay={0.3} duration={0.3} className="my-4 sm:my-8 sm:mr-16 p-3 sm:p-6 bg-teal-700/10 rounded-2xl shadow-inner shadow-teal-300/20 max-w-3xl">
-                            <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start pb-2'>
+                            <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start sm:pb-2'>
                               <Code className='mr-2 h-3 w-3 sm:h-4 sm:w-4' />
                               {t('hero.expertise')}
                             </h3>
-                            <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center sm:justify-start">
+                            <div className="flex flex-wrap gap-1 sm:gap-2 justify-center sm:justify-start">
                                 {techStack.map((tech, index) => (
-                                    <span key={index} className="px-2 sm:px-3 py-1 text-sm font-medium text-teal-100 bg-gray-900 border border-teal-500/50 hover:bg-gray-950 transition duration-300 cursor-default">
+                                    <span key={index} className="px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium text-teal-100 bg-gray-900 border border-teal-500/50 hover:bg-gray-950 transition duration-300 cursor-default">
                                       {tech}
                                     </span>
                                 ))}

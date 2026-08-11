@@ -64,7 +64,7 @@ const TabButton = ({ isActive, icon: Icon, onClick, children, accentColor }) => 
           size={18} 
         />
       </div>
-      <span className={`sm:block hidden p-2 text-md font-semibold truncate transition-all duration-500
+      <span className={`sm:block hidden p-2 text-sm sm:text-md font-semibold truncate transition-all duration-500
         ${isActive ? 'text-white' : 'group-hover:text-gray-200'}`}>
         {children}
       </span>
@@ -88,7 +88,7 @@ const DomainCard = ({ title, description, icons, accentColor }) => {
               {icons[0] && icons[0]({ className: "text-white text-xl" })}
             </div>
             <div>
-              <h3 className="sm:text-lg text-md font-bold text-gray-300 sm:mb-1 mb-0.5">{title}</h3>
+              <h3 className="text-sm sm:text-lg font-bold text-gray-300 sm:mb-1 mb-0.5">{title}</h3>
               <div className="flex items-center gap-2">
                 <div className={`w-8 h-0.5 bg-theme2 rounded-full`} />
                 <span className="sm:text-xs text-[9px] text-gray-400 font-medium">SPECIALIZATION</span>
@@ -196,7 +196,7 @@ export default function About() {
                 </div>
                 
                 {/* Titre */}
-                <h3 className="sm:text-xl text-md font-bold mb-2 sm:mb-4 text-gray-300">
+                <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-gray-300">
                   <span className="">
                     {t("about.role")} & {t("about.solver")}
                   </span>

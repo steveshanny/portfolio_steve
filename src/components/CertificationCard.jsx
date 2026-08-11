@@ -53,7 +53,7 @@ const CertificationCard = ({ title, institution, description, icon: Icon, imageU
             transition={{ duration: 0.3 }}
             className=''
           >
-            <h3 className="text-md font-bold text-white mb-1 leading-tight drop-shadow-lg">
+            <h3 className="text-sm sm:text-md font-bold text-white mb-1 leading-tight drop-shadow-lg">
               {title}
             </h3>
             <p className="text-sm text-gray-300 font-medium mb-1">
