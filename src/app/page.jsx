@@ -18,13 +18,13 @@ const Contact = dynamic(() => import('@/components/sections/Contact'), { ssr: fa
 // Composant principal de la section Hero
 const HeroContent = ({ handleNavClick, t, techStack }) => {
     return (
-        <div className="w-full h-full font-inter bg-gradient-to-br from-teal-950/90 via-gray-950 to-teal-950/90 text-white">
+        <div className="w-full h-full font-inter bg-gradient-to-br from-teal-950 via-gray-950 to-teal-950 text-white">
             
             {/* --- Hero Content Block --- */}
             <div className="min-h-[500px] h-auto xl:min-h-[600px] w-full flex flex-col sm:flex-row items-center pt-6 sm:pt-6 relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-0">
                 
                 {/* ----------------- 1. Bloc de l'image de profil (5/12) ----------------- */}
-                <div 
+                <div
                     className="relative sm:py-6 pt-3 overflow-visible z-10 w-full sm:w-4/12 h-full flex justify-center items-center duration-400 ease-out"
                 >
                     <div className="relative p-2 rounded-tr-full rounded-tl-full rounded-bl-full transition-scale duration-500 ease-in">
@@ -39,9 +39,9 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
 
                           </div>
                       </AnimatedSection>
-                      <div className="sm:rounded-full sm:rounded-br-xl p-1 sm:p-2 w-64 h-64 sm:w-64 sm:h-[395px]">
+                      <div className="sm:rounded-full sm:rounded-br-xl p-1 sm:p-2 w-48 h-48 sm:w-64 sm:h-[395px]">
                           <Image
-                            className='w-full h-full object-cover rounded-2xl sm:rounded-br-xl sm:rounded-full'
+                            className='w-full h-full object-cover rounded-3xl sm:rounded-br-xl sm:rounded-full'
                             src="/images/steve_shanny.jpeg"
                             alt="Steve Shanny"
                             fill

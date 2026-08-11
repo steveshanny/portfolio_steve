@@ -203,13 +203,13 @@ export default function Skills() {
       
         {/* Header Compact */}
         <AnimatedSection direction='scale' duration={0.5} threshold={0.1}  >
-          <div className=' sm:mb-10'>
-            <h2 className='text-2xl sm:text-4xl font-extrabold text-center'>
+          <div className='mb-0 sm:mb-14'>
+            <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
               <span className="text-theme2">&lt;</span>
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("skills.title")}</span>
               <span className="text-theme2">/&gt;</span>
             </h2>
-            <div className="w-16 h-1 bg-teal-500 rounded mx-auto mt-2"></div>
+            <div className="sm:w-16 w-10 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-2"></div>
           </div>
         </AnimatedSection>
 
