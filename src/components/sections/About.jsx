@@ -163,7 +163,7 @@ export default function About() {
       <div className="sm:w-[85%] max-w-6xl mx-auto">
         {/* En-tête amélioré */}
          <AnimatedSection direction='scale' duration={0.4} threshold={0.1}>
-            <div className='mb-0 sm:mb-14'>
+            <div className='mb-4 sm:mb-14'>
               <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
                 <span className="text-theme2">&lt;</span>
                 <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("about.title")}</span>
