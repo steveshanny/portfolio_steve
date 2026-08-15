@@ -277,7 +277,7 @@ export default function Home() {
           <>
             {/* Second block ----------------------------------------------------------------------------------------*/}
             <div 
-              className="bg-gray-950 mt-6 sm:mt-10 w-full rounded-t-[50px_15px] sm:rounded-t-[100px_30px] lg:rounded-t-[280px_80px] shadow-glow-teal transition-all duration-400 ease-out"          
+              className="bg-gray-950 mt-6 sm:mt-10 w-full rounded-t-[100px_15px] sm:rounded-t-[100px_30px] lg:rounded-t-[280px_80px] shadow-glow-teal transition-all duration-400 ease-out"          
             >
               <section id="about"></section>
               <About></About>
