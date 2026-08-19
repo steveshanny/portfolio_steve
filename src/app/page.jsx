@@ -152,10 +152,10 @@ export default function Home() {
     ];
 
     const navItems = [
-        { id: 'about', label: t('nav.about'), icon: <User className="h-5 w-5 sm:h-4 sm:w-4" /> },
-        { id: 'projects', label: t('nav.projects'), icon: <Code className="h-5 w-5 sm:h-4 sm:w-4" /> },
-        { id: 'skills', label: t('nav.skills'), icon: <Server className="h-5 w-5 sm:h-4 sm:w-4" /> },
-        { id: 'contacts', label: t('nav.contacts'), icon: <Phone className="h-5 w-5 sm:h-4 sm:w-4" /> },
+        { id: 'about', label: t('nav.about'), icon: <User className="h-6 w-6 sm:h-4 sm:w-4" /> },
+        { id: 'projects', label: t('nav.projects'), icon: <Code className="h-7 w-7 sm:h-5 sm:w-5" /> },
+        { id: 'skills', label: t('nav.skills'), icon: <Server className="h-6 w-6 sm:h-4 sm:w-4" /> },
+        { id: 'contacts', label: t('nav.contacts'), icon: <Phone className="h-6 w-6 sm:h-4 sm:w-4" /> },
     ];
 
   const handleNavClick = (sectionId) => {
@@ -241,7 +241,7 @@ export default function Home() {
         {/* NOUVEAU: Mobile & Tablet Navbar  */}
         {/* ---------------------------------------------------------------------------------- */}
         <div className="md:hidden fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4">
-          <div className="bg-gray-900/90 backdrop-blur-xl border border-teal-500/30 rounded-2xl shadow-[0_0_20px_rgba(20,184,166,0.2)] p-2 flex items-center justify-between gap-1 max-w-sm w-full">
+          <div className="bg-gray-950/90 backdrop-blur-xl border border-teal-500/30 rounded-2xl shadow- px-4 flex items-center justify-between gap-1 max-w-sm w-full">
             
             {/* Navigation Icons */}
             <div className="flex items-center justify-around flex-1 gap-1">
@@ -249,7 +249,7 @@ export default function Home() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="flex flex-col items-center justify-center p-2 rounded-xl text-gray-400 hover:text-teal-400 hover:bg-teal-500/10 transition-all duration-300 active:scale-95"
+                  className="flex flex-col items-center justify-center text-gray-400 py-3 px-4 hover:text-teal-400 hover:bg-teal-500/10 transition-all duration-300 active:scale-95"
                 >
                   {item.icon}
                 </button>
@@ -257,10 +257,10 @@ export default function Home() {
             </div>
 
             {/* Separator */}
-            <div className="h-8 w-[1px] bg-gray-700 mx-1"></div>
+            <div className="h-6 w-[1px] bg-gray-700 mx-1"></div>
 
             {/* Language Switcher Compact */}
-            <div className="flex flex-col gap-1">
+            <div className="flex gap-1">
                <button onClick={() => changeLanguage('en')} className={`text-[10px] font-bold py-1 px-2 rounded-md transition-all ${
                     language === 'en' ? 'bg-theme2 text-white' : 'text-gray-500 bg-gray-800'
                   }`}>EN</button>
