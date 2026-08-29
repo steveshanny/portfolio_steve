@@ -240,8 +240,8 @@ export default function Home() {
         {/* ---------------------------------------------------------------------------------- */}
         {/* NOUVEAU: Mobile & Tablet Navbar  */}
         {/* ---------------------------------------------------------------------------------- */}
-        <div className="md:hidden fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4">
-          <div className="bg-gray-950/90 backdrop-blur-xl border border-teal-500/30 rounded-2xl shadow- px-4 flex items-center justify-between gap-1 max-w-sm w-full">
+        <div className="md:hidden fixed bottom-4 left-0 right-0 z-50 flex justify-center">
+          <div className="bg-gray-950/90 backdrop-blur-xl border border-teal-500/30 shadow- px-4 flex items-center justify-between gap-1 max-w-sm w-full">
             
             {/* Navigation Icons */}
             <div className="flex items-center justify-around flex-1 gap-1">
