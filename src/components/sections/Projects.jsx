@@ -12,23 +12,23 @@ import { SiNextdotjs, SiPostgresql, SiTailwindcss, SiDrizzle, SiSpringboot, SiLa
 
 const getTechConfig = (name) => {
   const map = {
-    'NextJs': { icon: SiNextdotjs, color: '#fff', bg: 'bg-gray-800/30' },
-    'PostgreSQL': { icon: SiPostgresql, color: '#336791', bg: 'bg-gray-800/30' },
-    'Tailwind': { icon: SiTailwindcss, color: '#38bdf8', bg: 'bg-gray-800/30' },
-    'SpringBoot': { icon: SiSpringboot, color: '#6db33f', bg: 'bg-gray-800/30' },
-    'Laravel': { icon: SiLaravel, color: '#ff2d20', bg: 'bg-gray-800/30' },
-    'ReactJs': { icon: FaReact, color: '#61dafb', bg: 'bg-gray-800/30' },
-    'PHP': { icon: FaPhp, color: '#777bb4', bg: 'bg-gray-800/30'},
-    'MySQL': { icon: SiMysql, color: '#ce650fff', bg: 'bg-gray-800/30'},
-    'ExpressJs': { icon: SiExpress, color: '#ffffffff', bg: 'bg-gray-800/30'},
-    'Drizzle-ORM': { icon: SiDrizzle, color: '#00caff', bg: 'bg-gray-800/30'},
-    'Java': { icon: FaCode, color: '#f89820', bg: 'bg-gray-800/30'},
-    'CSS': { icon: FaCss3Alt, color: '#264de4', bg: 'bg-gray-800/30'},
-    'Jquery': { icon: SiJquery, color: '#0769ad', bg: 'bg-gray-800/30'},
-    'Bootstrap': { icon: FaBootstrap, color: '#7952b3', bg: 'bg-gray-800/30'},
-    'JavaScript': { icon: SiJavascript, color: '#f0db4f', bg: 'bg-gray-800/30'},
-    'TypeScript': { icon: SiTypescript, color: '#3178c6', bg: 'bg-gray-800/30'},
-    'NestJs': { icon: SiNestjs, color: '#ffffffff', bg: 'bg-red-400' }
+    'NextJs': { icon: SiNextdotjs, color: '#fff' },
+    'PostgreSQL': { icon: SiPostgresql, color: '#336791' },
+    'Tailwind': { icon: SiTailwindcss, color: '#38bdf8' },
+    'SpringBoot': { icon: SiSpringboot, color: '#6db33f' },
+    'Laravel': { icon: SiLaravel, color: '#ff2d20' },
+    'ReactJs': { icon: FaReact, color: '#61dafb' },
+    'PHP': { icon: FaPhp, color: '#777bb4' },
+    'MySQL': { icon: SiMysql, color: '#ce650fff' },
+    'ExpressJs': { icon: SiExpress, color: '#ffffffff' },
+    'Drizzle-ORM': { icon: SiDrizzle, color: '#00caff' },
+    'Java': { icon: FaCode, color: '#f89820' },
+    'CSS': { icon: FaCss3Alt, color: '#264de4' },
+    'Jquery': { icon: SiJquery, color: '#0769ad' },
+    'Bootstrap': { icon: FaBootstrap, color: '#7952b3' },
+    'JavaScript': { icon: SiJavascript, color: '#f0db4f' },
+    'TypeScript': { icon: SiTypescript, color: '#3178c6' },
+    'NestJs': { icon: SiNestjs, color: '#ffffffff' }
   };
   return map[name] || { icon: FaCode, color: '#999', bg: 'bg-gray-800/30'};
 };
@@ -37,8 +37,8 @@ const TechBadge = ({ name, mini = false }) => {
   const config = getTechConfig(name);
   const Icon = config.icon;
   return (
-    <div className={`flex items-center gap-2 ${mini ? 'px-2 py-1' : 'px-2 py-1'} rounded-md border border-white/5 ${config.bg} backdrop-blur-sm`}>
-      <Icon style={{ color: config.color }} className={mini ? "text-xs" : "text-sm"} />
+    <div className={`flex items-center gap-2 ${mini ? 'px-2 py-1' : 'sm:px-2 sm:py-1 px-0 py-0'} rounded-md sm:border border-white/5 sm:bg-gray-800/30 bg-transparent backdrop-blur-sm`}>
+      <Icon style={{ color: config.color }} className={mini ? "text-xs" : "sm:text-lg text-2xl"} />
       <span className="hidden md:block text-sm font-medium text-gray-300">{name}</span>
     </div>
   );
@@ -87,29 +87,29 @@ const FeaturedProject = ({ project, index, t, showAlert }) => {
         {/* INFO (Compact) */}
         <div className={`w-full md:w-1/2 flex flex-col items-start ${isRight ? 'sm:items-end':'items-start'} space-y-5`}>
           <div className='' >
-            <div className={`flex items-center sm:justify-end gap-2 text-teal-500/60 text-sm uppercase tracking-widest font-mono`}>
+            <div className={`flex items-center sm:justify-end gap-2 text-teal-500/60 text-xs uppercase tracking-widest font-mono`}>
               <FaClock size={10} />
               <span>{t(`projects.list.${project.id}.date`)}</span>
             </div>
 
-            <h3 className="sm:mt-1 mt-2 text-xl sm:text-2xl font-bold text-white leading-none">
+            <h3 className="sm:mt-1 mt-2 text-md sm:text-2xl font-bold text-white leading-none">
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t(`projects.list.${project.id}.title`)}</span>
             </h3>
 
           </div>
 
-          <p className={`text-gray-400 leading-relaxed line-clamp-3 sm:line-clamp-none  ${isRight ? 'sm:text-right':'text-left'}`}>
+          <p className={`text-gray-400 text-sm sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none  ${isRight ? 'sm:text-right':'text-left'}`}>
             {t(`projects.list.${project.id}.description`)}
           </p>
 
            {/* Report Link */}
            {project.hasReport && (
-              <a href="/documents/rapportStage.pdf" target="_blank" className="text-sm text-teal-400 underline hover:text-white">
+              <a href="/documents/rapportStage.pdf" target="_blank" className="sm:text-sm text-xs text-teal-400 underline hover:text-white">
                 {t("projects.list.3.report")}
               </a>
            )}
 
-          <div className={`flex flex-wrap gap-3 pt-1  ${isRight ? 'sm:justify-end':' justify-start'} `}>
+          <div className={`flex flex-wrap sm:gap-3 gap-2  ${isRight ? 'sm:justify-end':' justify-start'} `}>
             {project.techs.map((tech, i) => (
               <TechBadge key={i} name={tech} />
             ))}
