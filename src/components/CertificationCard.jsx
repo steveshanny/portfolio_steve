@@ -8,7 +8,7 @@ const CertificationCard = ({ title, institution, description, icon: Icon, imageU
 
   return (
     <motion.div 
-      className="group relative h-[180px] w-full rounded-2xl overflow-hidden cursor-pointer"
+      className="group relative sm:h-[160px] sm:w-full h-30 rounded-2xl overflow-hidden cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial={{ opacity: 0, y: 20 }}
@@ -44,19 +44,18 @@ const CertificationCard = ({ title, institution, description, icon: Icon, imageU
       </div>
 
       {/* Contenu principal */}
-      <div className="relative z-10 h-full flex flex-col justify-between ">
-        <div className='flex p-4' >
+      <div className="relative z-10 h-full flex flex-col justify-between">
+        <div className='flex sm:p-4 p-3 bg-teal-950/70' >
 
           {/* Titre et institution */}
           <motion.div
-            animate={{ y: isHovered ? -10 : 0 }}
             transition={{ duration: 0.3 }}
             className=''
           >
-            <h3 className="text-sm sm:text-md font-bold text-white mb-1 leading-tight drop-shadow-lg">
+            <h3 className="sm:text-base text-sm text-white mb-1 leading-tight drop-shadow-lg">
               {title}
             </h3>
-            <p className="text-sm text-gray-300 font-medium mb-1">
+            <p className="sm:text-sm text-xs text-gray-300 font-medium mb-1">
               {institution}
             </p>
           </motion.div>
@@ -85,7 +84,7 @@ const CertificationCard = ({ title, institution, description, icon: Icon, imageU
         >
           <div className="hidden w-full md:block md:flex items-center gap-2 px-4 mb-6">
             <div className={'w-2 h-2 rounded-full bg-teal-500'} />
-            <span className="text-sm font-medium text-gray-300">
+            <span className="sm:text-sm text-xs font-medium text-gray-300">
               {'Certification'}
             </span>
           </div>

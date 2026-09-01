@@ -182,14 +182,7 @@ export default function Skills() {
       imageUrl: '/images/certification-js.webp',
       certUrl: 'https://www.javascript.com',
     },
-    // {
-    //   title: t("skills.certifications.pix.title"),
-    //   institution: t("skills.certifications.pix.institution"),
-    //   description: t("skills.certifications.pix.description"),
-    //   icon: FaGraduationCap,
-    //   imageUrl: '/images/certification-pix-2025.jpg',
-    //   certUrl: 'https://pix.fr',
-    // },
+
     {
       title: t("skills.certifications.huawei.title"),
       institution: t("skills.certifications.huawei.institution"),
@@ -198,7 +191,14 @@ export default function Skills() {
       imageUrl: '/images/certification-Overview-IA-2025.png',
       certUrl: 'https://e.huawei.com',
     },
-
+    {
+      title: t("skills.certifications.pix.title"),
+      institution: t("skills.certifications.pix.institution"),
+      description: t("skills.certifications.pix.description"),
+      icon: FaGraduationCap,
+      imageUrl: '/images/certification-pix-2025.jpg',
+      certUrl: 'https://pix.fr',
+    },
   ];
 
   return (
@@ -285,7 +285,7 @@ export default function Skills() {
 
           {/* Soft Skills */}
           <div>
-            <div className="px-4 sm:pl-10 h-full pt-8 transition-colors duration-300">
+            <div className="sm:px-4 sm:pl-10 h-full sm:pt-8 transition-colors duration-300">
               <div className="flex items-center justify-center sm:mb-16 mb-10">
                 <div>
                   <p className="text-md text-center sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500"><span className='text-orange-500 text-3xl' >-</span> {t("skills.softSkills.subtitle")} <span className='text-orange-500 text-3xl' >-</span></p>
@@ -301,19 +301,16 @@ export default function Skills() {
 
               {/* Section Certifications */}
               <div>
-                <div className=" mt-12">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg">
-                      <FaGraduationCap className="text-xl text-theme2" />
-                    </div>
+                <div className="sm:mt-20 mt-12">
+                  <div className="flex items-center justify-center gap-3 sm:mb-12 mb-6">
                     <div>
-                      <h2 className="text-lg sm:text-xl font-semibold text-gray-300">{t("skills.certifications.title")}</h2>
-                      <p className="text-sm text-gray-400">{t("skills.certifications.subtitle")}</p>
+                      <p className="text-md text-center sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500"><span className='text-orange-500 text-3xl' >-</span> {t("skills.certifications.title")} <span className='text-orange-500 text-3xl' >-</span></p>
+                      <div className="sm:w-10 w-6 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-1"></div>
                     </div>
                   </div>
                 </div>
                 
-                <div className='grid grid-cols-1 md:grid-cols-1 gap-6 mt-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4'>
                   {certifications.map((cert, index) => (
                     <CertificationCard key={index} {...cert} />
                   ))}
