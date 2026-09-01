@@ -90,7 +90,7 @@ const SkillTag = ({ Icon, name, techKey }) => {
 // Composant SoftSkillItem amélioré
 const SoftSkillItem = ({ text }) => (
   <AnimatedSection direction='scale' threshold={0.5} duration={0.5}
- className="flex items-start sm:text-base text-xs sm:mb-4 mb-3 group sm:px-6 sm:py-4 px-3 py-2 bg-gray-900 rounded-xl">
+ className="flex items-start sm:text-base text-xs sm:mb-4 mb-2 group sm:px-6 sm:py-4 px-3 py-2 bg-gray-900 rounded-xl">
   
     <span className='text-gray-300 group-hover:text-white transition-colors'>{text}</span>
   </AnimatedSection>
@@ -310,7 +310,7 @@ export default function Skills() {
                   </div>
                 </div>
                 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 sm:gap-4 gap-3 mt-4'>
                   {certifications.map((cert, index) => (
                     <CertificationCard key={index} {...cert} />
                   ))}
