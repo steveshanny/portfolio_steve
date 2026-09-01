@@ -90,10 +90,8 @@ const SkillTag = ({ Icon, name, techKey }) => {
 // Composant SoftSkillItem amélioré
 const SoftSkillItem = ({ text }) => (
   <AnimatedSection direction='scale' threshold={0.5} duration={0.5}
- className="flex items-start text-sm mb-3 group">
-    <div className="mt-0.5 mr-3 text-theme2 flex-shrink-0 group-hover:scale-110 transition-transform">
-      <FaBrain className="text-sm" />
-    </div>
+ className="flex items-start sm:text-base text-xs sm:mb-4 mb-3 group sm:px-6 sm:py-4 px-3 py-2 bg-gray-900 rounded-xl">
+  
     <span className='text-gray-300 group-hover:text-white transition-colors'>{text}</span>
   </AnimatedSection>
 );
@@ -221,7 +219,7 @@ export default function Skills() {
 
       {/* Grille principale des compétences */}
       <div className='max-w-6xl mx-auto'>
-        <div className='grid grid-cols-1 gap-6 mb-12'>
+        <div className='grid grid-cols-1 gap-6 mb-12 sm:pt-0 pt-4'>
 
           {/* Compétences techniques */}
           <div className='lg:col-span-2 flex flex-col items-center'>
@@ -287,19 +285,19 @@ export default function Skills() {
 
           {/* Soft Skills */}
           <div>
-            <div className="px-4 sm:pl-10 h-full sm:border-l border-gray-700/50 transition-colors duration-300">
-              <div className="flex items-center justify-center mb-6">
+            <div className="px-4 sm:pl-10 h-full pt-8 transition-colors duration-300">
+              <div className="flex items-center justify-center sm:mb-16 mb-10">
                 <div>
                   <p className="text-md text-center sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500"><span className='text-orange-500 text-3xl' >-</span> {t("skills.softSkills.subtitle")} <span className='text-orange-500 text-3xl' >-</span></p>
                   <div className="sm:w-10 w-6 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-1"></div>
                 </div>
               </div>
               
-              <ul className="space-y-4">
+              <div className="sm:columns-2 gap-4 sm:w-[800px] mx-auto">
                 {softSkills.map((skill, index) => (
                   <SoftSkillItem key={index} text={skill} />
                 ))}
-              </ul>
+              </div>
 
               {/* Section Certifications */}
               <div>
