@@ -77,12 +77,12 @@ const SkillTag = ({ Icon, name, techKey }) => {
   const iconColor = techIconColors[techKey] || '#9CA3AF'; // Gris par défaut
 
   return (
-    <div className='group flex items-center px-2.5 py-1.5 sm:px-4 sm:py-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-all duration-300 text-white hover:border-gray-600 cursor-default'>
+    <div className='group flex items-center px-2.5 py-1.5 sm:px-4 sm:py-3 sm:rounded-full rounded-xl bg-gray-800/80 hover:bg-gray-700/80 transition-all duration-300 text-white hover:border-gray-600 cursor-default'>
       <Icon 
-        className='text-lg sm:text-2xl mr-2 group-hover:scale-110 transition-transform'
+        className='text-2xl sm:mr-2 group-hover:scale-110 transition-transform'
         style={{ color: iconColor }}
       />
-      <span className='text-sm font-medium whitespace-nowrap'>{name}</span>
+      <span className='text-sm font-medium whitespace-nowrap sm:block hidden'>{name}</span>
     </div>
   );
 };
@@ -99,19 +99,16 @@ const SoftSkillItem = ({ text }) => (
 );
 
 // Composant SkillGroup amélioré avec catégorie
-const SkillGroup = ({ title, icon: Icon, skills, category }) => (
-  <div className='w-full p-5 rounded-xl transition-colors duration-300 hover:border-gray-600/50'>
-    <div className='w-full flex items-center justify-between mb-4 pb-3 border-b border-teal-700/50 '>
+const SkillGroup = ({ title, icon: Icon, skills }) => (
+  <div className='w-full p-5 sm:pt-8 rounded-xl transition-colors duration-300 hover:border-gray-600/50'>
+    <div className='w-full flex items-center justify-between sm:pb-4 pb-2'>
       <div className='w-full flex items-center'>
-        <div className='w-full text-center' >
-          <h3 className='text-sm sm:text-base font-semibold text-gray-300'>{title}</h3>
-          {category && (
-            <span className='text-sm text-gray-400 font-medium'>{category}</span>
-          )}
+        <div className='w-full text-center ' >
+          <h3 className='text-sm sm:text-base font-semibold text-gray-300'>- {title} -</h3>
         </div>
       </div>
     </div>
-    <div className='flex flex-wrap justify-center gap-2'>
+    <div className='flex flex-wrap justify-center sm:gap-4 gap-2'>
       {skills.map((skill, index) => (
         <SkillTag 
           key={index} 
@@ -218,23 +215,21 @@ export default function Skills() {
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("skills.title")}</span>
               <span className="text-theme2">/&gt;</span>
             </h2>
-            <div className="sm:w-16 w-10 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-2"></div>
+            <div className="sm:w-16 w-10 h-0.5 sm:h-1.5 bg-teal-500 rounded mx-auto sm:mt-2"></div>
           </div>
         </AnimatedSection>
 
       {/* Grille principale des compétences */}
       <div className='max-w-6xl mx-auto'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 pt-8'>
+        <div className='grid grid-cols-1 gap-6 mb-12'>
 
           {/* Compétences techniques */}
           <div className='lg:col-span-2 flex flex-col items-center'>
-            <div className="flex items-center justify-center mb-6">
-              <div className="p-2.5 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-lg mr-3">
-                <FaCode className="text-lg text-teal-500" />
-              </div>
+            <div className="flex flex-col items-center justify-center sm:mb-6 mb-2">
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-300">{t("skills.hardSkills.title")}</h3>
-                <p className="text-sm text-gray-400">{t("skills.hardSkills.subtitle")}</p>
+                <p className="text-md text-center sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500"><span className='text-orange-500 text-3xl' >-</span> {t("skills.hardSkills.subtitle")} <span className='text-orange-500 text-3xl' >-</span></p>
+                <div className="sm:w-10 w-6 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-1"></div>
+
               </div>
             </div>
             
@@ -293,13 +288,10 @@ export default function Skills() {
           {/* Soft Skills */}
           <div>
             <div className="px-4 sm:pl-10 h-full sm:border-l border-gray-700/50 transition-colors duration-300">
-              <div className="flex items-center mb-6">
-                <div className="p-2.5 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg mr-3">
-                  <FaBrain className="text-lg text-theme2" />
-                </div>
+              <div className="flex items-center justify-center mb-6">
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-300">{t("skills.softSkills.title")}</h3>
-                  <p className="text-sm text-gray-400">{t("skills.softSkills.subtitle")}</p>
+                  <p className="text-md text-center sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500"><span className='text-orange-500 text-3xl' >-</span> {t("skills.softSkills.subtitle")} <span className='text-orange-500 text-3xl' >-</span></p>
+                  <div className="sm:w-10 w-6 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-1"></div>
                 </div>
               </div>
               
