@@ -196,20 +196,20 @@ export default function Contact() {
           {/* Contact Info Cards - Left Side */}
           <div className='lg:w-1/3 lg:pl-12'>
             <AnimatedSection direction='up' threshold={0.1} delay={0.2} duration={0.5}>
-              <div className='grid grid-cols-1 gap-4 mb-8'>
+              <div className='grid grid-cols-1 sm:gap-4 gap-3 mb-8'>
                 {contactInfo.map((item) => (
                   <div 
                     key={item.id}
-                    className='relative group bg-black/40 backdrop-blur-sm rounded-2xl p-3 border border-white/10 hover:border-teal-500/50 transition-all duration-500 hover:-translate-y-1'
+                    className='relative group bg-black/40 backdrop-blur-sm sm:rounded-2xl rounded-xl sm:p-3 p-2 border border-white/10 hover:border-teal-500/50 transition-all duration-500 hover:-translate-y-1'
                   >
                     <AnimatedSection direction='scale' threshold={0.1} delay={item.delay} duration={0.3} >
                       <div className='flex items-start space-x-3'>
                         <div className='p-2 rounded-xl bg-orange-500/30 backdrop-blur-sm'>
-                          <div className='text-xl text-white'>{item.icon}</div>
+                          <div className='sm:text-xl text-md text-white'>{item.icon}</div>
                         </div>
                         <div className='flex-1 min-w-0'>
-                          <p className='text-xs text-gray-300 mb-1 truncate'>{item.label}</p>
-                          <p className='text-sm font-medium text-gray-300 truncate'>{item.value}</p>
+                          <p className='text-xs text-gray-300 sm:mb-1 truncate'>{item.label}</p>
+                          <p className='sm:text-sm text-xs font-medium text-gray-300 truncate'>{item.value}</p>
                         </div>
                         {item.action === 'copy' && (
                           <button
@@ -218,9 +218,9 @@ export default function Contact() {
                             title={t('contact.copy')}
                           >
                             {copySuccess ? (
-                              <FaCheck className='text-gray-950' />
+                              <FaCheck className='text-gray-950 sm:text-lg text-sm' />
                             ) : (
-                              <FaCopy className='text-gray-900 hover:text-gray-950' />
+                              <FaCopy className='text-gray-900 hover:text-gray-950 sm:text-lg text-sm' />
                             )}
                           </button>
                         )}
@@ -230,7 +230,7 @@ export default function Contact() {
                             className='group p-2 rounded-lg bg-green-500 transition-colors'
                             title={t('contact.call')}
                           >
-                            <FaPhone className=' text-white group-hover:scale-125 transition-all duration-500' />
+                            <FaPhone className=' text-white group-hover:scale-125 transition-all duration-500 sm:text-lg text-sm' />
                           </button>
                         )}
                       </div>
@@ -243,7 +243,7 @@ export default function Contact() {
             {/* Social Links */}
             <AnimatedSection direction='scale' threshold={0.1} duration={0.4}>
               <div className='mb'>
-                <h3 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                <h3 className='sm:text-lg text-sm font-semibold text-white mb-4 flex items-center'>
                   <FaGlobe className='mr-2 text-teal-400' />
                   <span className='text-gray-300' >{t('contact.connect')}</span>
                 </h3>
@@ -254,12 +254,12 @@ export default function Contact() {
                       href={social.url}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='flex flex-col items-center justify-center p-3 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10 hover:border-teal-500/50 transition-all duration-500 group hover:bg-black/60'
+                      className='flex flex-col items-center justify-center sm:p-3 p-2 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10 hover:border-teal-500/50 transition-all duration-500 group hover:bg-black/60'
                     >
-                      <div className='text-2xl mb-2 group-hover:scale-110 transition-transform text-gray-300'>
+                      <div className='sm:text-2xl text-xl mb-2 group-hover:scale-110 transition-transform text-gray-300'>
                         {social.icon}
                       </div>
-                      <span className='text-sm font-medium text-gray-300'>{social.label}</span>
+                      <span className='sm:text-sm text-xs font-medium text-gray-300'>{social.label}</span>
                       <FaExternalLinkAlt className='absolute top-2 right-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity text-teal-400' />
                     </a>
                   ))}
@@ -274,10 +274,10 @@ export default function Contact() {
             <AnimatedSection direction='scale' threshold={0.1} duration={0.4}>
               <div className='bg-black/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl'>
                 <div className='mb-6'>
-                  <h3 className='text-sm sm:text-xl font-bold text-gray-300 mb-2 text-center'>
+                  <h3 className='text-sm sm:text-xl font-bold text-gray-300 sm:mb-2 mb-1 text-center'>
                     {t('contact.formTitle')}
                   </h3>
-                  <p className='text-gray-400 text-sm text-center'>
+                  <p className='text-gray-400 sm:text-sm text-xs text-center'>
                     {t('contact.formSubtitle')}
                   </p>
                 </div>
@@ -296,13 +296,13 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className='w-full text-xs sm:text-sm bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl py-3 px-4 text-white placeholder-gray-500 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30 transition-all duration-300 outline-none'
+                        className='w-full text-xs sm:text-sm bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl sm:py-3 py-2 sm:px-4 px-3 text-white placeholder-gray-500 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30 transition-all duration-300 outline-none'
                         placeholder={t('contact.namePlaceholder')}
                       />
                     </div>
 
                     <div className='group'>
-                      <label className='flex items-center mb-2 text-sm font-medium text-gray-300'>
+                      <label className='flex items-center mb-2 text-xs sm:text-sm font-medium text-gray-300'>
                         <FaEnvelope className='mr-2 text-teal-400' />
                         {t('contact.email')}
                       </label>
@@ -312,7 +312,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className='w-full text-xs sm:text-sm bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl py-3 px-4 text-white placeholder-gray-500 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30 transition-all duration-300 outline-none'
+                        className='w-full text-xs sm:text-sm bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl sm:py-3 py-2 sm:px-4 px-3 text-white placeholder-gray-500 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30 transition-all duration-300 outline-none'
                         placeholder={t('contact.emailPlaceholder')}
                       />
                     </div>
@@ -320,7 +320,7 @@ export default function Contact() {
 
                   {/* Message */}
                   <div className='group'>
-                    <label className='flex items-center mb-2 text-sm font-medium text-gray-300'>
+                    <label className='flex items-center mb-2 sm:text-sm text-xs font-medium text-gray-300'>
                       <FaComment className='mr-2 text-teal-400' />
                       {t('contact.message')}
                     </label>
@@ -330,7 +330,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className='w-full text-xs sm:text-sm bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl py-3 px-4 text-white placeholder-gray-500 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30 transition-all duration-300 outline-none resize-none'
+                      className='w-full text-xs sm:text-sm bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl sm:py-3 py-2 sm:px-4 px-3 text-white placeholder-gray-500 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30 transition-all duration-300 outline-none resize-none'
                       placeholder={t('contact.messagePlaceholder')}
                     />
                   </div>
@@ -339,16 +339,16 @@ export default function Contact() {
                   <button
                     type='submit'
                     disabled={isLoading}
-                    className={`w-full text-xs sm:text-sm group relative overflow-hidden rounded-xl py-3 px-6 font-semibold transition-all duration-500 ${
+                    className={`w-full text-xs sm:text-sm group relative overflow-hidden rounded-xl sm:py-3 py-2 sm:px-4 px-3 font-semibold transition-all duration-500 ${
                       isLoading
                         ? 'bg-gray-700 cursor-not-allowed'
-                        : 'bg-gradient-to-r from-teal-600 to-teal-600 '
+                        : 'bg-gradient-to-r from-teal-700 to-teal-700 '
                     }`}
                   >
                     <div className='relative z-10 flex items-center justify-center'>
                       {isLoading ? (
                         <>
-                          <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3'></div>
+                          <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white'></div>
                           <span className='text-white'>{t('contact.sending')}</span>
                         </>
                       ) : (
@@ -372,7 +372,7 @@ export default function Contact() {
         <div className='max-w-6xl mx-auto px-4'>
           <div className='text-center'>
             <p className='text-gray-400 text-[11px] sm:text-xs'>
-              &copy; 2026 <strong className='text-white'>Steve Shanny</strong>. {t('copyright.text')}
+              &copy; 2026 <span className='text-white'>Steve Shanny</span>. {t('copyright.text')}
             </p>
           </div>
         </div>
