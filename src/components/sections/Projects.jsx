@@ -98,7 +98,7 @@ const FeaturedProject = ({ project, index, t, showAlert }) => {
 
           </div>
 
-          <p className={`text-gray-400 text-sm sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none  ${isRight ? 'sm:text-right':'text-left'}`}>
+          <p className={`text-gray-400 text-sm sm:text-base leading-relaxed line-clamp-4 sm:line-clamp-none text-justify ${isRight ? 'sm:text-right':'sm:text-left'}`}>
             {t(`projects.list.${project.id}.description`)}
           </p>
 

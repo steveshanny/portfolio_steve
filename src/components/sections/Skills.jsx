@@ -286,7 +286,7 @@ export default function Skills() {
           {/* Soft Skills */}
           <div>
             <div className="sm:px-4 sm:pl-10 h-full sm:pt-8 transition-colors duration-300">
-              <div className="flex items-center justify-center sm:mb-16 mb-10">
+              <div className="flex items-center justify-center sm:mb-14 mb-6">
                 <div>
                   <p className="text-md text-center sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500"><span className='text-orange-500 text-3xl' >-</span> {t("skills.softSkills.subtitle")} <span className='text-orange-500 text-3xl' >-</span></p>
                   <div className="sm:w-10 w-6 h-0.5 sm:h-1 bg-teal-500 rounded mx-auto sm:mt-1"></div>

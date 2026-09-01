@@ -236,7 +236,7 @@ export default function About() {
             </div>
             
             {/* Carte de spécialisation active */}
-            <div className="transition-opacity duration-200 h-full">
+            <div className="transition-opacity duration-200 h-full text-justify">
               {renderDescription()}
             </div>
           </div>

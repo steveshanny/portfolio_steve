@@ -200,7 +200,7 @@ export default function Contact() {
                 {contactInfo.map((item) => (
                   <div 
                     key={item.id}
-                    className='relative group bg-black/40 backdrop-blur-sm sm:rounded-2xl rounded-xl sm:p-3 p-2 border border-white/10 hover:border-teal-500/50 transition-all duration-500 hover:-translate-y-1'
+                    className='relative group bg-black/40 backdrop-blur-sm sm:rounded-2xl rounded-xl p-3 border border-white/10 hover:border-teal-500/50 transition-all duration-500 hover:-translate-y-1'
                   >
                     <AnimatedSection direction='scale' threshold={0.1} delay={item.delay} duration={0.3} >
                       <div className='flex items-start space-x-3'>
@@ -208,7 +208,7 @@ export default function Contact() {
                           <div className='sm:text-xl text-md text-white'>{item.icon}</div>
                         </div>
                         <div className='flex-1 min-w-0'>
-                          <p className='text-xs text-gray-300 sm:mb-1 truncate'>{item.label}</p>
+                          <p className='text-xs sm:text-sm text-gray-300 sm:mb-1 truncate'>{item.label}</p>
                           <p className='sm:text-sm text-xs font-medium text-gray-300 truncate'>{item.value}</p>
                         </div>
                         {item.action === 'copy' && (
