@@ -182,7 +182,7 @@ export default function About() {
             threshold={0.2}
             duration={0.4}
           >
-            <div className="relative p-4 sm:pb-6 sm:px-6 rounded-2xl h-full">
+            <div className="relative sm:pb-6 sm:px-6 rounded-2xl h-full">
               {/* Carte avec effet verre */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-950 
                 backdrop-blur-xl rounded-l-2xl shadow-2xl"/>
