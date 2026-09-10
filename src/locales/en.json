@@ -12,14 +12,14 @@
     "expertise": "FullStack Expertise",
     "greeting": "Hi, I'm",
     "headline": "I transform your ideas into modern and high-performance web applications.",
-    "tagline": "Senior Full Stack Developer | React & SpringBoot Ecosystem Expert | Freelancer",
+    "tagline": "Junior Full Stack Developer | React & SpringBoot Ecosystem Expert | Freelancer",
     "available":"Available"
 
   },
   "about": {
     "title": "About Me",
     "subtitle": "About me and my education",
-    "description": "I'm a digital architect, a passionate soul obsessed with the magic behind every line of code. My kingdom? The intersection between the relentless logic of algorithms and the boundless creativity of the modern web.I firmly believe that the best applications aren't those that work perfectly, but those that solve real problems with discreet elegance. My approach? Transforming technical complexity into user simplicity. I'm currently studying data science and AI.",
+    "description": "I’m a curious web developer passionate about innovation and creativity. I enjoy building things, learning new skills, and finding simple solutions to the problems I encounter. To me, professionalism also means being a good listener. I’m open to feedback, advice, and other people’s ideas because I see every piece of feedback as an opportunity to improve. I’m a sociable and dynamic person, and I particularly enjoy working as part of a team.",
     "badge": "Who I am",
     "role": "Web Developer",
     "solver": "Problem Solver",
