@@ -181,7 +181,7 @@ export default function Contact() {
       </div>
 
       <div className='footer-section relative z-10 w-full h-auto items-center py-8 sm:py-28 px-4'>
-        <AnimatedSection direction='scale' duration={0.5} threshold={0.1}>
+        <AnimatedSection direction='scale' duration={1.5} threshold={1}>
           <div className='mb-6 sm:mb-14'>
             <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
               <span className="text-theme2">&lt;</span>

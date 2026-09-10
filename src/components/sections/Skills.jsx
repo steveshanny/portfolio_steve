@@ -206,7 +206,7 @@ export default function Skills() {
       <section id='skills' className='absolute -top-20' />
       
         {/* Header Compact */}
-        <AnimatedSection direction='scale' duration={0.5} threshold={0.1}  >
+        <AnimatedSection direction='scale' duration={1.5} threshold={1}  >
           <div className='mb-0 sm:mb-14'>
             <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
               <span className="text-theme2">&lt;</span>
@@ -232,7 +232,7 @@ export default function Skills() {
             </div>
             
             {/* Langages */}
-            <AnimatedSection direction='scale' duration={0.5}>
+            <AnimatedSection direction='scale' duration={0.7}>
               <SkillGroup 
                 title={t("skills.categories.languages")}
                 icon={FaCode}
@@ -242,7 +242,7 @@ export default function Skills() {
             </AnimatedSection>
             
             {/* Frontend */}
-            <AnimatedSection direction='scale' duration={0.5}>
+            <AnimatedSection direction='scale' duration={0.7}>
               <SkillGroup 
                 title={t("skills.categories.frontend")}
                 icon={FaCode}
@@ -252,7 +252,7 @@ export default function Skills() {
             </AnimatedSection>
             
             {/* Backend */}
-            <AnimatedSection direction='scale' duration={0.5}>
+            <AnimatedSection direction='scale' duration={0.7}>
               <SkillGroup 
                 title={t("skills.categories.backend")}
                 icon={FaServer}
@@ -262,7 +262,7 @@ export default function Skills() {
             </AnimatedSection>
 
             {/* Bases de données */}
-            <AnimatedSection direction='scale'  duration={0.5}>
+            <AnimatedSection direction='scale'  duration={0.7}>
               <SkillGroup 
                 title={t("skills.categories.databases")}
                 icon={FaDatabase}
@@ -272,7 +272,7 @@ export default function Skills() {
             </AnimatedSection>
             
             {/* Outils */}
-            <AnimatedSection direction='scale' duration={0.5}>
+            <AnimatedSection direction='scale' duration={0.7}>
               <SkillGroup 
                 title={t("skills.categories.tools")}
                 icon={FaTools}
