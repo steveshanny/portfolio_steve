@@ -208,7 +208,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         
         {/* Header Compact */}
-        <AnimatedSection direction='scale' duration={0.5} threshold={0.1}>
+        <AnimatedSection direction='scale' duration={1.5} threshold={1}>
           <div className=''>
             <h2 className='text-xl sm:text-4xl font-extrabold text-center text-gray-300'>
               <span className="text-theme2">&lt;</span>
@@ -223,7 +223,13 @@ export default function Projects() {
         {/* SECTION 1: FEATURED (01, 02, 04) */}
         <div className="flex flex-col gap-6 sm:gap-0 sm:mb-14 sm:pb-16 pb-12">
           {featuredProjects.map((project, index) => (
-             <AnimatedSection key={project.id} direction="scale" threshold={0.3} delay={0.1} duration={0.4}>
+             <AnimatedSection
+               key={project.id}
+               direction={'scale'}
+               threshold={0.9}
+               delay={index * 0.2}
+               duration={0.8}
+             >
                 <FeaturedProject project={project} index={index} t={t} showAlert={showAlert} />
              </AnimatedSection>
           ))}
@@ -232,14 +238,18 @@ export default function Projects() {
         {/* SECTION 2: THE LAB / ARCHIVE (03, 05, 06) - GRID */}
         {otherProjects.length > 0 && (
             <div className='sm:block hidden' >
-                <div className="flex items-center gap-4 mb-6">
-                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500">Other Experiments</h3>
-                    <div className="h-px bg-white/10 flex-grow"></div>
-                </div>
+                <AnimatedSection direction="up" threshold={0.2} delay={0} duration={1.0}>
+                  <div className="flex items-center gap-4 mb-6">
+                      <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500">Other Experiments</h3>
+                      <div className="h-px bg-white/10 flex-grow"></div>
+                  </div>
+                </AnimatedSection>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {otherProjects.map((project) => (
-                        <CompactProject key={project.id} project={project} t={t} showAlert={showAlert} />
+                    {otherProjects.map((project, index) => (
+                        <AnimatedSection key={project.id} direction="up" threshold={0.15} delay={0.15 + index * 0.2} duration={1.0}>
+                          <CompactProject project={project} t={t} showAlert={showAlert} />
+                        </AnimatedSection>
                     ))}
                 </div>
             </div>

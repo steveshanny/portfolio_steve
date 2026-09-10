@@ -32,7 +32,7 @@ const AvailabilityIndicator = () => {
         <div className="relative">
           <div className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-l-0 border-r-4 border-r-teal-500 border-t-transparent border-b-transparent"></div>
           
-          <div className="bg-gray-900 border border-teal-500/30 rounded-lg px-3 py-2 shadow-xl backdrop-blur-sm">
+          <div className="bg-gray-950 rounded-lg px-3 py-2 shadow-xl backdrop-blur-sm">
             <div className="flex items-center gap-2">
               <FaUserTie className="text-teal-400 text-xs" />
               <div className="text-xs font-medium whitespace-nowrap">

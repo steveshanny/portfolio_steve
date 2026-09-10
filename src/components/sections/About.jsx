@@ -145,7 +145,7 @@ export default function About() {
       
       <div className="sm:w-[85%] max-w-6xl mx-auto">
         {/* En-tête amélioré */}
-         <AnimatedSection direction='scale' duration={0.4} threshold={0.1}>
+         <AnimatedSection direction='scale' duration={1.5} threshold={1}>
             <div className='mb-4 sm:mb-20'>
               <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
                 <span className="text-theme2">&lt;</span>
@@ -157,14 +157,13 @@ export default function About() {
          </AnimatedSection>
         
         {/* Grille principale */}
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10">
+        <AnimatedSection
+          direction='scale'
+          threshold={0.9}
+          duration={0.8}
+          className="grid lg:grid-cols-2 gap-8 sm:gap-10">
           {/* Colonne Gauche - Introduction */}
-          <AnimatedSection 
-            className="sm:h-[320px]"
-            direction='scale'
-            threshold={0.2}
-            duration={0.4}
-          >
+          <div className="sm:h-[320px]">
             <div className="relative sm:pb-6 sm:px-6 rounded-2xl">
               <div className="relative z-10">
                 
@@ -183,7 +182,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </AnimatedSection>
+          </div>
           
           {/* Colonne Droite - Spécialisations */}
           <div className="sm:h-[320px]">
@@ -213,7 +212,7 @@ export default function About() {
               {renderDescription()}
             </div>
           </div>
-        </div>
+        </AnimatedSection>
         
       </div>
     </div>

@@ -24,7 +24,7 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
             <div className="min-h-[500px] h-auto xl:min-h-[600px] w-full flex flex-col sm:flex-row items-center pt-6 sm:pt-6 relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-0">
                 
                 {/* ----------------- 1. Bloc de l'image de profil (5/12) ----------------- */}
-                <div
+                <AnimatedSection direction='scale' duration={0.8}
                     className="relative sm:py-6 pt-3 overflow-visible z-10 w-full sm:w-4/12 h-full flex justify-center items-center duration-400 ease-out"
                 >
                     <div className="relative p-2 rounded-tr-full rounded-tl-full rounded-bl-full transition-scale duration-500 ease-in">
@@ -52,14 +52,14 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                           />
                         </div>
                     </div>
-                </div>
+                </AnimatedSection>
 
                 {/* ----------------- 2. Bloc du titre et des boutons (7/12) ----------------- */}
                 <div className="w-full sm:w-8/12 h-full flex justify-center sm:justify-start items-center px-0 sm:px-0 z-10 mt-6 sm:mt-0">
                   <div className="text-center sm:text-left">
                     <div>
                       {/* --- Ligne d'accroche et Nom (Style Terminal/Code) --- */}
-                      <AnimatedSection direction='left' duration={0.3} className='text-xs sm:text-lg font-mono mb-3 sm:mb-4 sm:transform sm:-translate-x-20 '>
+                      <AnimatedSection direction='scale' duration={0.5} className='text-xs sm:text-lg font-mono mb-3 sm:mb-4 sm:transform sm:-translate-x-20 '>
                         <span className="text-gray-400">{t("hero.greeting")}</span>
                         
                         {/* Nom stylisé comme une balise ou un élément de code */}
@@ -68,17 +68,17 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                         </span>
                       </AnimatedSection>
                       {/* --- Headline Principal (Proposition de Valeur) --- */}
-                      <AnimatedSection direction='left' delay={0.1} duration={0.3} className="text-xl sm:text-4xl font-extrabold leading-tight mb-3 sm:mb-4">
+                      <AnimatedSection direction='scale' delay={0.1} duration={0.5} className="text-xl sm:text-4xl font-extrabold leading-tight mb-3 sm:mb-4">
                         <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500">{t("hero.headline")}</h1>
                       </AnimatedSection>
                     </div>
                         {/* Titre & Slogan */}
-                        <AnimatedSection direction='left' delay={0.2} duration={0.3} className="py-2 sm:py-3 text-sm sm:text-3xl font-mono italic text-gray-300">
+                        <AnimatedSection direction='scale' delay={0.2} duration={0.5} className="py-2 sm:py-3 text-sm sm:text-3xl font-mono italic text-gray-300">
                             <span className="text-gray-300">{t("hero.title")}</span>
                             <span className="clignoter font-bold text-teal-400">_</span>
                         </AnimatedSection>
                         {/* Bloc "Tech Tag Cloud" */}
-                        <AnimatedSection direction='left' delay={0.3} duration={0.3} className="my-4 sm:my-8 sm:mr-16 p-3 sm:p-6 bg-teal-700/10 rounded-2xl shadow-inner shadow-teal-300/20 max-w-3xl">
+                        <AnimatedSection direction='scale' delay={0.3} duration={0.5} className="my-4 sm:my-8 sm:mr-16 p-3 sm:p-6 bg-teal-700/10 rounded-2xl shadow-inner shadow-teal-300/20 max-w-3xl">
                             <h3 className='text-sm font-semibold mb-2 text-teal-300 flex items-center justify-center sm:justify-start sm:pb-2'>
                               <Code className='mr-2 h-3 w-3 sm:h-4 sm:w-4' />
                               {t('hero.expertise')}
@@ -92,14 +92,14 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
                             </div>
                         </AnimatedSection>
                         {/* Bouton de contact */}
-                        <AnimatedSection direction='left' delay={0.4} duration={0.3} className='mt-6 sm:mt-10'>
+                        <AnimatedSection direction='scale' delay={0.4} duration={0.5} className='mt-6 sm:mt-10'>
                           <button className='px-5 sm:px-6 py-2 bg-teal-500/90 text-black text-xs sm:text-sm font-bold rounded-lg transition-all duration-300 hover:bg-theme2 hover:text-white transform shadow-lg'
                               onClick={() => handleNavClick('contacts')} >
                               {t("hero.contact")}
                           </button>
                       </AnimatedSection>
                       {/* Steve */}
-                      <AnimatedSection direction='left' delay={0.5} duration={0.3} className='sm:hidden w-full flex justify-center items-center' >
+                      <AnimatedSection direction='scale' delay={0.5} duration={0.5} className='sm:hidden w-full flex justify-center items-center' >
                         <div>
                         <a 
                           href='/documents/CV_Steve_Shanny_Pro.pdf' 
@@ -123,7 +123,6 @@ const HeroContent = ({ handleNavClick, t, techStack }) => {
 export default function Home() {
 
   const { t, language, changeLanguage } = useTranslation();
-  const scrollProgress = useScroll();
   const [shouldLoadSections, setShouldLoadSections] = useState(false);
 
   useEffect(() => {
