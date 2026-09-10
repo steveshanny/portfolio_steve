@@ -140,13 +140,13 @@ export default function About() {
   };
 
   return (
-    <div className="flex h-full w-full justify-center text-white pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="flex h-full w-full justify-center text-white pt-16 sm:pt-36 px-4 sm:px-6 lg:px-8 overflow-hidden">
       
       
       <div className="sm:w-[85%] max-w-6xl mx-auto">
         {/* En-tête amélioré */}
          <AnimatedSection direction='scale' duration={0.4} threshold={0.1}>
-            <div className='mb-4 sm:mb-14'>
+            <div className='mb-4 sm:mb-20'>
               <h2 className='text-xl sm:text-4xl font-extrabold text-center'>
                 <span className="text-theme2">&lt;</span>
                 <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("about.title")}</span>
@@ -160,20 +160,16 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10">
           {/* Colonne Gauche - Introduction */}
           <AnimatedSection 
-            className="sm:h-[360px]"
+            className="sm:h-[320px]"
             direction='scale'
             threshold={0.2}
             duration={0.4}
           >
-            <div className="relative sm:pb-6 sm:px-6 rounded-2xl h-full">
-              {/* Carte avec effet verre */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-950 
-                backdrop-blur-xl rounded-l-2xl shadow-2xl"/>
-              
+            <div className="relative sm:pb-6 sm:px-6 rounded-2xl">
               <div className="relative z-10">
                 
                 {/* Titre */}
-                <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-gray-300 sm:text-right text-center">
+                <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-gray-300 text-center sm:mt-4">
                   <span className="">
                     {t("about.role")}
                   </span>
@@ -190,7 +186,7 @@ export default function About() {
           </AnimatedSection>
           
           {/* Colonne Droite - Spécialisations */}
-          <div className="sm:h-[360px]">
+          <div className="sm:h-[320px]">
             {/* Navigation par onglets améliorée */}
             <div 
               className="relative"

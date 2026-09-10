@@ -60,7 +60,7 @@ const FeaturedProject = ({ project, index, t, showAlert }) => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto pt-10 sm:pt-32 border-b border-white/5 last:border-0">
+    <div className="w-full max-w-5xl mx-auto pt-10 sm:pt-24 border-b border-white/5 last:border-0">
       <div className={`flex flex-col ${isRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-6 md:gap-14`}>
         
         {/* IMAGE SLIDER (Compact) */}
@@ -204,12 +204,12 @@ export default function Projects() {
   const otherProjects = projectsData.filter(p => !p.featured);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-gray-950 via-gray-950 to-teal-950 text-gray-200 pt-16 px-4 sm:px-6">
+    <div className="w-full h-full bg-gradient-to-br from-gray-950 via-gray-950 to-teal-950 text-gray-200 sm:pt-36 pt-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Compact */}
         <AnimatedSection direction='scale' duration={0.5} threshold={0.1}>
-          <div className='sm:mt-16'>
+          <div className=''>
             <h2 className='text-xl sm:text-4xl font-extrabold text-center text-gray-300'>
               <span className="text-theme2">&lt;</span>
               <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-500' >{t("projects.title")}</span>
