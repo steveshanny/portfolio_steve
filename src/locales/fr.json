@@ -19,10 +19,9 @@
   "about": {
     "title": "À Propos",
     "subtitle": "À Propos de moi et mon parcours",
-    "description": "Je suis un développeur web curieux et passionné par l’innovation et la créativité. J’aime créer, apprendre de nouvelles choses et chercher des solutions simples aux problèmes que je rencontre. Pour moi, le professionnalisme passe aussi par l’écoute : je suis ouvert aux critiques, aux conseils et aux idées des autres, car chaque retour est une occasion de progresser. Je suis quelqu’un de sociable et dynamique, et j’apprécie particulièrement le travail en équipe.",
+    "description": "Je suis un développeur web curieux et passionné par l’innovation et la créativité. J’aime créer de nouvelles choses et chercher des solutions simples aux problèmes que je rencontre. Pour moi, le professionnalisme passe aussi par l’écoute : je suis ouvert aux critiques, aux conseils et aux idées des autres, car chaque retour est une occasion de progresser. Je suis quelqu’un de sociable et dynamique. And en tant que Développeur Web Full-Stack & Intégrateur IA, je cherche également à mettre la technologie et l’intelligence artificielle au service de solutions concrètes et utiles.",
     "badge": "Qui je suis",
-    "role": "Développeur Web",
-    "solver": "Résolveur de problèmes",
+    "role": "Développeur Web Full-Stack & Intégrateur IA",
     "training": "Formation assistée"
   },
   "projects": {
