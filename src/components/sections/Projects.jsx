@@ -204,7 +204,7 @@ export default function Projects() {
   const otherProjects = projectsData.filter(p => !p.featured);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-gray-950 via-gray-950 to-teal-950 text-gray-200 pt-16 sm:pt-36 px-4 sm:px-6">
+    <div className="w-full h-full bg-gradient-to-br from-gray-950 via-gray-950 to-teal-950 text-gray-200 pt-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Compact */}

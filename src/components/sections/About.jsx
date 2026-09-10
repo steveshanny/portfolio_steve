@@ -77,7 +77,7 @@ const TabButton = ({ isActive, icon: Icon, onClick, children, accentColor }) => 
 const DomainCard = ({ title, description, icons, accentColor }) => {
   
   return (
-    <div className="w-full h-full bg-gradient-to-b from-teal-950/70 to-gray-950 pb-8 px-8 sm:rounded-br-2xl rounded-b-2xl">
+    <div className="w-full bg-teal-950/70 sm:px-8 px-5 sm:rounded-br-2xl rounded-b-2xl">
       <div 
         className="relative rounded-2xl overflow-hidden transition-all duration-700 h-full group"
       >
@@ -100,23 +100,6 @@ const DomainCard = ({ title, description, icons, accentColor }) => {
           <p className="text-sm sm:text-base text-gray-300 sm:leading-7 mb-6 sm:h-40">
             {description}
           </p>
-          
-          {/* Icônes de la spécialité */}
-          <div className="flex items-center gap-3 pt-4 border-t border-gray-800/50">
-            <span className="text-xs text-gray-500 font-medium">Key</span>
-            <div className="flex gap-2">
-              {icons.map((Icon, index) => (
-                <div 
-                  key={index}
-                  className={`p-2 rounded-lg bg-gray-800/50 border border-gray-700/50 
-                    transition-all duration-500 hover:scale-110 hover:border-${accentColor}-500/30
-                    hover:bg-gray-800/80`}
-                >
-                  {Icon && <Icon className="text-gray-300 text-sm" />}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -188,17 +171,11 @@ export default function About() {
                 backdrop-blur-xl rounded-l-2xl shadow-2xl"/>
               
               <div className="relative z-10">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 sm:px-4 sm:py-2 px-2 py-1 rounded-full border border-gray-200/30 
-                  backdrop-blur-sm sm:mb-6 mb-3">
-                  <FaUserAlt className="text-teal-400 text-xs sm:text-sm" />
-                  <span className="sm:text-sm text-xs font-medium text-teal-500">{t("about.badge")} ?</span>
-                </div>
                 
                 {/* Titre */}
-                <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-gray-300">
+                <h3 className="text-sm sm:text-xl font-bold mb-2 sm:mb-4 text-gray-300 sm:text-right text-center">
                   <span className="">
-                    {t("about.role")} & {t("about.solver")}
+                    {t("about.role")}
                   </span>
                 </h3>
                 
@@ -219,7 +196,7 @@ export default function About() {
               className="relative"
             >
               <div className="">
-                <div className="grid grid-cols-4 sm:grid-cols-4 gap-3">
+                <div className="grid grid-cols-4 sm:grid-cols-4 sm:gap-3 gap-1">
                   {educationDomains.map((domain) => (
                     <TabButton
                       key={domain.key}
@@ -236,7 +213,7 @@ export default function About() {
             </div>
             
             {/* Carte de spécialisation active */}
-            <div className="transition-opacity duration-200 h-full text-justify">
+            <div className="transition-opacity duration-200 text-justify">
               {renderDescription()}
             </div>
           </div>
