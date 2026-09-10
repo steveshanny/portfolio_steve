@@ -12,17 +12,16 @@
     "expertise": "FullStack Expertise",
     "greeting": "Hi, I'm",
     "headline": "I transform your ideas into modern and high-performance web applications.",
-    "tagline": "Senior Full Stack Developer | React & SpringBoot Ecosystem Expert | Freelancer",
+    "tagline": "Junior Full Stack Developer | React & SpringBoot Ecosystem Expert | Freelancer",
     "available":"Available"
 
   },
   "about": {
     "title": "About Me",
     "subtitle": "About me and my education",
-    "description": "I'm a digital architect, a passionate soul obsessed with the magic behind every line of code. My kingdom? The intersection between the relentless logic of algorithms and the boundless creativity of the modern web.I firmly believe that the best applications aren't those that work perfectly, but those that solve real problems with discreet elegance. My approach? Transforming technical complexity into user simplicity. I'm currently studying data science and AI.",
+    "description": "I’m a curious web developer passionate about innovation and creativity. I enjoy creating, learning new things, and finding simple solutions to the problems I encounter. To me, professionalism also means being a good listener: I’m open to feedback, advice, and other people’s ideas, because every piece of feedback is an opportunity to improve. I’m sociable, dynamic. And as a Full-Stack Web Developer & AI Integrator, I also aim to use technology and artificial intelligence to build practical, useful, and accessible solutions.",
     "badge": "Who I am",
-    "role": "Web Developer",
-    "solver": "Problem Solver",
+    "role": "Full-Stack Web Developer & AI Integrator",
     "training": "Assisted Training"
   },
 
@@ -171,7 +170,7 @@
     "networksTitle": "Networks & Security",
     "networks": "Networks\nMastery of network fundamentals: Cisco configuration, routing (RIP, EIGRP), NAT and IP address management for infrastructures.",    
     "aiTitle": "Artificial Intelligence",
-    "ai": "Exploration of artificial intelligence technologies and their integration into innovative applications. I'm currently in Master I of Data Science and Artificial Intelligence."
+    "ai": "I’m interested in integrating artificial intelligence into modern web applications, particularly through Large Language Models (LLMs). I design and integrate LLM-powered features and APIs to build smarter, more interactive, and useful applications."
   },
   "copyright":{
     "text":" All rights reserved."

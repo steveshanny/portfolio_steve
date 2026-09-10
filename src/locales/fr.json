@@ -13,16 +13,15 @@
     "expertise": "Expertise FullStack",
     "greeting": "Salut, moi c'est",
     "headline": "Je transforme vos idées en applications web modernes et performantes.",
-    "tagline": "Développeur Full Stack Senior | Expert en écosystème React & SpringBoot | Freelance",
+    "tagline": "Développeur Full Stack Junior | Expert en écosystème React & SpringBoot | Freelance",
     "available":"Disponible"
   },
   "about": {
     "title": "À Propos",
     "subtitle": "À Propos de moi et mon parcours",
-    "description": "Je suis un architecte du numérique, un passionné obsédé par la magie qui se cache derrière chaque ligne de code. Mon royaume? L'intersection entre la logique implacable des algorithmes et la créativité sans limites du web moderne. Je crois fermement que les meilleures applications ne sont pas celles qui fonctionnent parfaitement, mais celles qui résolvent des problèmes réels avec une élégance discrète. Mon approche? Transformer la complexité technique en simplicité utilisateur. J'étudie actuellement la science des données et l'IA.",
+    "description": "Je suis un développeur web curieux et passionné par l’innovation et la créativité. J’aime créer de nouvelles choses et chercher des solutions simples aux problèmes que je rencontre. Pour moi, le professionnalisme passe aussi par l’écoute : je suis ouvert aux critiques, aux conseils et aux idées des autres, car chaque retour est une occasion de progresser. Je suis quelqu’un de sociable et dynamique. And en tant que Développeur Web Full-Stack & Intégrateur IA, je cherche également à mettre la technologie et l’intelligence artificielle au service de solutions concrètes et utiles.",
     "badge": "Qui je suis",
-    "role": "Développeur Web",
-    "solver": "Résolveur de problèmes",
+    "role": "Développeur Web Full-Stack & Intégrateur IA",
     "training": "Formation assistée"
   },
   "projects": {
@@ -170,7 +169,7 @@
     "networksTitle": "Réseaux & Sécurité",
     "networks": "Maîtrise des fondamentaux réseaux : configuration Cisco, routage (RIP, EIGRP), NAT et gestion d'adressage IP pour des infrastructures.",    
     "aiTitle": "Intelligence Artificielle",
-    "ai": "Exploration des technologies d'intelligence artificielle et leur intégration dans des applications innovantes. Je suis en Master I de science des données et de l'intelligence artificielle."
+    "ai": "Je m’intéresse à l’intégration de l’intelligence artificielle dans les applications web modernes, notamment à travers les grands modèles de langage (LLM). Je conçois et intègre des fonctionnalités basées sur les API de LLM pour créer des applications plus intelligentes, interactives et utiles."
   },
   "copyright":{
     "text":"Tous droits réservés."
