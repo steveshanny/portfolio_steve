@@ -118,8 +118,8 @@ img {
 
 /* Scrollbar globale pour tout le site */
 html {
-  scrollbar-width: thin;
-  scrollbar-color: #14b8a6 #000000;
+  /* scrollbar-width: thin; */
+  scrollbar-color: #da5b29 #000000;
 }
 
 /* Webkit browsers */
@@ -132,12 +132,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #14b8a6;
+  background: #da5b29;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #14b8a6;
+  background: #da5b29;
 }
 
 .skills-monitor{
